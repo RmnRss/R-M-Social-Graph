@@ -8,7 +8,7 @@ Well first let's try and discuss a bit about the characters of Rick & Morty. Her
 *INSERT IMAGE WITH STATS*
 
 ## The Network
-![alt text](https://github.com/RmnRss/rm-social-graphs/blob/raw/gh-pages/plots/characters_network_img.png)
+![Network In Image](https://github.com/RmnRss/rm-social-graphs/blob/gh-pages/plots/characters_network_img.png)
 
 ## Communities
 
