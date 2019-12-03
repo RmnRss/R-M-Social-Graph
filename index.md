@@ -8,7 +8,7 @@ Well first let's try and discuss a bit about the characters of Rick & Morty. Her
 *INSERT IMAGE WITH STATS*
 
 ## The Network
-![alt text](https://github.com/RmnRss/rm-social-graphs/blob/gh-pages/plots/characters_network_img.png)
+![alt text](https://github.com/RmnRss/rm-social-graphs/blob/raw/gh-pages/plots/characters_network_img.png)
 
 ## Communities
 
@@ -30,9 +30,11 @@ Oh dear, Rick & Morty songs, let's try and figure out what makes them so special
 
 #### Data Sources
 
-[Rickipedia](https://rickandmorty.fandom.com/wiki/Rickipedia "Fandom Homepage")
-[Rick & Morty API] (https://rickandmortyapi.com/ "API Page")
-[Rick & Morty API on GitHub] (https://github.com/afuh/rick-and-morty-api "Github Page")
+* [Rickipedia](https://rickandmorty.fandom.com/wiki/Rickipedia "Fandom Homepage")
+
+* [Rick & Morty API](https://rickandmortyapi.com/ "API Page")
+
+* [Rick & Morty API on GitHub](https://github.com/afuh/rick-and-morty-api "Github Page")
 
 <footer> 
 Website created for the [Social Graphs and Interactions](http://kurser.dtu.dk/course/02805 "Course Description") course at [DTU](https://www.dtu.dk/english "DTU HomePage")
