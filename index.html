@@ -1,62 +1,282 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+        <title>Rick & Morty - SGI</title>    
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-</head>
+        <!-- Custom fonts for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-<body>
-    
-    <p>Welcome to our site here we will discuss our findings about the first three season of Rick & Morty. Without further adue, let's get **schwitfy** !!</p>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
 
-    <h1>Characters</h1>
-    
-    <h2>General Facts </h2>
+    <body>
 
-    <p>Well first let's try and discuss a bit about the characters of Rick & Morty. Here are a few stats about the characters : </p> 
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Rick & Morty SGI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Transcripts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-*INSERT IMAGE WITH STATS*
+        <!-- Header -->       
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container">
+                    <h1 class="masthead-heading mb-0">Rick & Morty</h1>
+                    <h2 class="masthead-subheading mb-0">Through the Schwifty Lens of Data Science</h2>
+                    <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">View On Github</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
 
-    <h2>The Network </h2>
-    
-    ![Network In Image](https://github.com/RmnRss/rm-social-graphs/blob/gh-pages/plots/characters_network_img.png)
+        <!-- Introduction -->
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="p-5">
+                        <h2 class="display-4">Welcome to our website !</h2>
+                        <p>Here we will discuss our data science findings about the first three season of Rick & Morty. Without further adue, let's get <b>schwitfy</b>!!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h2>Communities </h2>
+        <!-- Character -->
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="p-5">
+                        <h1 class="display-4">Characters</h1>
+                        <!-- General Facts -->
+                        <div class="row p-5">
+                            <h2 class="col-12">General Facts</h2>
+                            <p>Well first let's try and discuss a bit about the characters of Rick & Morty. Here are a few stats about the characters : </p>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Total</th>
+                                    <th>Ricks</th>
+                                    <th>Mortys</th>
+                                    <th>Alive</th>
+                                    <th>Dead</th>
+                                    <th>Unknown</th>
+                                    <th>Species</th>
+                                </tr>
+                                <tr>
+                                    <td>313</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </div>
 
-    <h2>Most dangerous character </h2>
-    
-    <h1>Transcripts </h1> 
+                        <!-- Network -->
+                        <div class="container-fluid row p-5">
+                            <h2>The Network</h2>
 
-    <p>Here come the Natural Langage processing ! We used that magnificent tool tool calculate Sentiment of each season, and see the evolution of the langage over time. </p>
+                            <!-- About The Network -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h3>About the Network</h3>
+                                </div>
+                                <div class="row">
+                                    <p>Well nice number aren't they ? But where the fudge did they came from ? Well we used the Rickipedia & the Rick & Morty API to come up with the last numbers. And to create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
 
-    <h2>Sentiment Scores</h2>
+                                </div>
+                            </div>
 
-    <h2>It's all about the words !!</h2>
+                            <!-- General View -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h3>General View</h3>
+                                </div>
+                                <div class="row">
+                                    <p> Now what about some visuals ? </p>
+                                </div>
+                                <div class="row">
+                                    <img class="img-fluid" src="./plots/characters_network_img.png">
+                                </div>
+                                <div class="row">
+                                    <p> Above you can see the complete Network, we highlighted the Ricks in <b>color</b> and the Mortys in <b> color </b> pretty cool uh ? </p>
+                                </div>
 
-    <h2>Songs</h2>
+                            </div>
 
-    <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                            <!-- Degree Analysis -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h3>Degree Analysis</h3>
+                                </div>
+                                <div class="row">
+                                    <p> Woo I can barely breathe, after seeing that Network ! Let's catch our breaths slowly by carefuly and steadily analysing said network, and we are gonna start with degree analysis ! Woot Woooot ! </p>
+                                </div>
+                                <div class="row">
+                                    <img class="img-fluid" src="./plots/degree_distribution.png">
+                                </div>
+                                <div class="row">
+                                    <p> Well nothing very surprising here, Lots of characters only know a few others, which makes sense considering the structure of the series, which focus on random episodes following each other. And of course the mains characters have a lot of connexion e.g Rick, Morty, Jerry, Beth</p>
+                                </div>
+                                <div class="row">
+                                    <h4>In-Degree</h4>
+                                </div>
+                                <div class="row">
+                                    <img class="img-fluid" src="./plots/in_degree_distribution.png">
+                                </div>
+                                <div class="row">
+                                    <p>Well same remark as above</p>
+                                </div>
+                                <div class="row">
+                                    <h4>Out-Degree</h4>
+                                </div>
+                                <div class="row">
+                                    <img class="img-fluid" src="./plots/out_degree_distribution.png">
+                                </div>
+                                <div class="row">
+                                    <p>Well same remark as above</p>
+                                </div>
 
-    <h4>Data Sources</h4>
+                            </div>
 
-    * [Rickipedia](https://rickandmorty.fandom.com/wiki/Rickipedia "Fandom Homepage")
 
-    * [Rick & Morty API](https://rickandmortyapi.com/ "API Page")
+                            <!-- Status View -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h3>Status View</h3>
+                                </div>
+                                <div class="row">
+                                    <p> Another point about Rick & Morty : LOTS AND LOTS OF DYING. So we decided to look into that, and we created this graph : </p>
+                                </div>
+                                <div class="row">
+                                    <img class="img-fluid" src="./plots/characters_network_status.png">
+                                </div>
+                                <div class="row">
+                                    <p> Mmmh out so out of 313 characters X are dead, but who's responsible for this ? We ran a little analysis about this and guess who's the most dangerous character in Rick & Morty ?</p>
+                                </div>
+                                <!-- Jerry Presentation -->
+                                <div class="row">
+                                    <p> Jerry </p>
+                                </div>
 
-    * [Rick & Morty API on GitHub](https://github.com/afuh/rick-and-morty-api "Github Page")
+                            </div>
 
-    <footer> 
-        Website created for the [Social Graphs and Interactions](http://kurser.dtu.dk/course/02805 "Course Description") course at [DTU](https://www.dtu.dk/english "DTU HomePage")
-    </footer>
+                            <!-- Species View -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h3>Species View</h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Communities -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h2>Communities</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/scripts.js"></script>
-</body>
+        <!-- Transcript -->
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="p-5">
+                        <h1>Transcripts </h1> 
+                        <p>Here come the Natural Langage processing ! We used that magnificent tool tool calculate Sentiment of each season, and see the evolution of the langage over time. </p>
+                        <h2>Sentiment Scores</h2>
+                        <h2>It's all about the words !!</h2>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+        <!-- Songs -->
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="p-5">
+                        <h2>Songs</h2>
+                        <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+        <!-- Data -->
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="p-5">
+                        <h4>Data Sources</h4>
+                        <ul>
+                            <li>
+                                <a class="" href="https://rickandmorty.fandom.com/wiki/Rickipedia">[Rickipedia]</a>
+                            </li>
+                            <li>
+                                <a class="" href="https://rickandmortyapi.com/">[Rick & Morty API]</a>
+                            </li>
+                            <li>
+                                <a class="" href="https://github.com/afuh/rick-and-morty-api">[Rick & Morty API on GitHub]</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-black">
+            <div class="container">
+                <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p>
+                <a class="m-0 text-center text-white small">Website created for the [Social Graphs and Interactions](http://kurser.dtu.dk/course/02805 "Course Description") course at [DTU](https://www.dtu.dk/english "DTU HomePage </a>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
 </html>
 
