@@ -160,14 +160,14 @@ header.masthead .bg-circle-4 {
 }
 
 main {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   /* creates 20% margins on either side */
 }
 
 .full-width {
-  margin-left: -33.33%;
-  margin-right: -33.33%;
+  margin-left: -5%;
+  margin-right: -5%;
 }
 
 .caption {
