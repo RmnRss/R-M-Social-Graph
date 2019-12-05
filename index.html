@@ -63,207 +63,355 @@
             <div class="bg-circle-4 bg-circle"></div>
         </header>
 
-        <!-- Introduction -->
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="p-5">
-                        <h2 class="display-4">Welcome to our website !</h2>
-                        <p>Here we will discuss our data science findings about the first three season of Rick & Morty. Without further adue, let's get <b>schwitfy</b>!!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <main>
 
-        <!-- Character -->
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="p-5">
-                        <h1 class="display-4">Characters</h1>
-                        <!-- General Facts -->
-                        <div class="row p-5">
-                            <h2 class="col-12">General Facts</h2>
-                            <p>Well first let's try and discuss a bit about the characters of Rick & Morty. Here are a few stats about the characters : </p>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Total</th>
-                                    <th>Ricks</th>
-                                    <th>Mortys</th>
-                                    <th>Alive</th>
-                                    <th>Dead</th>
-                                    <th>Unknown</th>
-                                    <th>Species</th>
-                                </tr>
-                                <tr>
-                                    <td>313</td>
-                                    <td>42</td>
-                                    <td>30</td>
-                                    <td>147</td>
-                                    <td>115</td>
-                                    <td>51</td>
-                                    <td>11</td>
-                                </tr>
-                            </table>
-                            <p>From those number we can see some interesting points, that we decided to look into : So out of 313 characters 36 % of them are dead, interesting. We can also notice that 13 % of the characters are Ricks and that 10% are Mortys.</p>
-                        </div>
-
-                        <!-- Network -->
-                        <div class="container-fluid row p-5">
-                            <h2>The Network</h2>
-
-                            <!-- About The Network -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h3>About the Network</h3>
-                                </div>
-                                <div class="row">
-                                    <p>Well nice number aren't they ? But where the fudge did they came from ? Well we used the Rickipedia & the Rick & Morty API to come up with the last numbers. And to create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
-
-                                </div>
-                            </div>
-
-                            <!-- General View -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h3>General View</h3>
-                                </div>
-                                <div class="row">
-                                    <p> Now what about some visuals ? </p>
-                                </div>
-                                <div class="row">
-                                    <img class="img-fluid" src="./plots/characters_network_img.png">
-                                </div>
-                                <div class="row">
-                                    <p> Above you can see the complete Network, we highlighted the Ricks in <b>color</b> and the Mortys in <b> color </b> pretty cool uh ? </p>
-                                </div>
-
-                            </div>
-
-                            <!-- Degree Analysis -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h3>Degree Analysis</h3>
-                                </div>
-                                <div class="row">
-                                    <p> Woo I can barely breathe, after seeing that Network ! Let's catch our breaths slowly by carefuly and steadily analysing said network, and we are gonna start with degree analysis ! Woot Woooot ! </p>
-                                </div>
-                                <div class="row">
-                                    <img class="img-fluid" src="./plots/degree_distribution.png">
-                                </div>
-                                <div class="row">
-                                    <p> Well nothing very surprising here, Lots of characters only know a few others, which makes sense considering the structure of the series, which focus on random episodes following each other. And of course the mains characters have a lot of connexion e.g Rick, Morty, Jerry, Beth</p>
-                                </div>
-                                <div class="row">
-                                    <h4>In-Degree</h4>
-                                </div>
-                                <div class="row">
-                                    <img class="img-fluid" src="./plots/in_degree_distribution.png">
-                                </div>
-                                <div class="row">
-                                    <p>Well same remark as above</p>
-                                </div>
-                                <div class="row">
-                                    <h4>Out-Degree</h4>
-                                </div>
-                                <div class="row">
-                                    <img class="img-fluid" src="./plots/out_degree_distribution.png">
-                                </div>
-                                <div class="row">
-                                    <p>Well same remark as above</p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Status View -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h3>Status View</h3>
-                                </div>
-                                <div class="row">
-                                    <p> Another point about Rick & Morty : LOTS AND LOTS OF DYING. So we decided to look into that, and we created this graph : </p>
-                                </div>
-                                <div class="row">
-                                    <img class="img-fluid" src="./plots/characters_network_status.png">
-                                </div>
-                                <div class="row">
-                                    <p> Mmmh out so out of 313 characters X are dead, but who's responsible for this ? We ran a little analysis about this and guess who's the most dangerous character in Rick & Morty ?</p>
-                                </div>
-                                <!-- Jerry Presentation -->
-                                <div class="row">
-                                    <p> Jerry </p>
-                                </div>
-
-                            </div>
-
-                            <!-- Species View -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h3>Species View</h3>
-                                </div>
-                            </div>
-                            
-                            <!-- Communities -->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <h2>Communities</h2>
-                                </div>
-                            </div>
+            <!-- Introduction -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h2 class="display-4">Welcome to our website !</h2>
+                            <p>Here we will discuss our data science findings about the first three season of Rick & Morty. Without further adue, let's get <b>schwitfy</b>!!</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Transcript -->
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="p-5">
-                        <h1>Transcripts </h1> 
-                        <p>Here come the Natural Langage processing ! We used that magnificent tool tool calculate Sentiment of each season, and see the evolution of the langage over time. </p>
-                        <h2>Sentiment Scores</h2>
-                        <h2>It's all about the words !!</h2>
+            <!-- Character -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h1 class="display-4">Characters</h1>
+                            <!-- General Facts -->
+                            <div class="row p-5">
+                                <h2>General Facts</h2>
+                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty. Here are a few stats about the characters : </p>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>Total</th>
+                                        <th>Ricks</th>
+                                        <th>Mortys</th>
+                                        <th>Alive</th>
+                                        <th>Dead</th>
+                                        <th>Unknown</th>
+                                        <th>Species</th>
+                                    </tr>
+                                    <tr>
+                                        <td>313</td>
+                                        <td>42</td>
+                                        <td>30</td>
+                                        <td>147</td>
+                                        <td>115</td>
+                                        <td>51</td>
+                                        <td>11</td>
+                                    </tr>
+                                </table>
+                                <p>From those number we can see some interesting points, that we decided to look into : So out of 313 characters 36 % of them are dead, interesting. We can also notice that 13 % of the characters are Ricks and that 10% are Mortys.</p>
+                            </div>
+
+                            <!-- Network -->
+                            <div class="container-fluid row p-5">
+                                <h2>The Network</h2>
+
+                                <!-- About The Network -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h3>About the Network</h3>
+                                    </div>
+                                    <div class="row">
+                                        <p>Well nice number aren't they ? But where the fudge did they came from ? Well we used the Rickipedia & the Rick & Morty API to come up with the last numbers. And to create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
+
+                                    </div>
+                                </div>
+
+                                <!-- General View -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h3>General View</h3>
+                                    </div>
+                                    <div class="row">
+                                        <p> Now what about some visuals ? </p>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/characters_network_img.png">
+                                        <figcaption class="caption">The Full Network</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p> Above you can see the complete Network, we highlighted the Ricks in <b>color</b> and the Mortys in <b> color </b> pretty cool uh ? </p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Degree Analysis -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h3>Degree Analysis</h3>
+                                    </div>
+                                    <div class="row">
+                                        <p> Woo I can barely breathe, after seeing that Network ! Let's catch our breaths slowly by carefuly and steadily analysing said network, and we are gonna start with degree analysis ! Woot Woooot ! </p>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/degree_distribution.png">
+                                        <figcaption class="caption">The Degree Distribution</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p> Well nothing very surprising here, Lots of characters only know a few others, which makes sense considering the structure of the series, which focus on random episodes following each other. And of course the mains characters have a lot of connexion e.g Rick, Morty, Jerry, Beth</p>
+                                    </div>
+
+                                    <!--
+<div class="row">
+<h4>In-Degree</h4>
+</div>
+<div class="row">
+<img class="img-fluid" src="./plots/in_degree_distribution.png">
+</div>
+<div class="row">
+<p>Well same remark as above</p>
+</div>
+<div class="row">
+<h4>Out-Degree</h4>
+</div>
+<div class="row">
+<img class="img-fluid" src="./plots/out_degree_distribution.png">
+</div>
+<div class="row">
+<p>Well same remark as above</p>
+</div>
+-->
+
+                                    <!-- Centrality Analysis -->
+                                    <div class="row">
+                                        <h3>Centrality</h3>
+                                    </div>
+
+                                    <!-- Centrality Betweenness -->
+                                    <div class="row">
+                                        <h4>Centrality Betweenness</h4>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/centrality_betweenness.png">
+                                        <figcaption class="caption">Centrality Betweeness</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p>Since betweenness is a measure of which node has the most shortest paths going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network.</p>
+                                        <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
+                                    </div>
+
+                                    <!-- Centrality Eigenvector -->
+                                    <div class="row">
+                                        <h4>Centrality Eigenvector</h4>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/centrality_eigenvector.png">
+                                        <figcaption class="caption">Centrality Betweeness</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p>The Eigenvector centrality is a measure of how nodes are connected to other nodes with high degree, and in that sense it is a ranking. Characters have high eigenvector centrality probably because of popularity, i.e. they appear often with other high-degree characters.</p>
+                                        <p>Again, Morty and Rick appear with highest centrality, whereas Jerry is on fifth place. Perhaps, like explained above with betweenness, because he is on many adventures in different locations, where a lot of characters with low degrees appear. Simply because these characters appear in locations that make them isolated from the rest of the network.</p>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Status View -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h3>Status View</h3>
+                                    </div>
+                                    <div class="row">
+                                        <p> Another point about Rick & Morty : LOTS AND LOTS OF DYING. So we decided to look into that, and we created this graph : </p>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/characters_network_status.png">
+                                        <figcaption class="caption">The Network by Status</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p> Mmmh out so out of <b>313</b> characters <b>114</b> are dead, but who's responsible for this ? </p>
+                                        <p>We ran a little analysis about this through our Network. We looked at every nodes neighboor and analyzed the status (alive or dead) of those neighboor to have a sense of who could be the most dangerous character and guess who's the most dangerous character in Rick & Morty ?</p>
+                                    </div>
+
+                                    <!-- Most Dangerous -->
+                                    <div class="row">
+                                        <div class="row">
+                                            <h3>Most Dangerous character</h3>
+                                        </div>                                    
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/most_dangerous.png">
+                                            <figcaption class="caption">Top 10 Most Dangerous Characters</figcaption>
+                                        </figure>
+                                        <div class="row">
+
+                                            <p>It's without any surprise that Rick & Morty are the most dangerous characters but the, apparently, otherwise innocent father, Jerry Smith, gets the third place in our rankings of most dangerous character in the whole series, beating his own wife & daughter. Even though those characters also have a lot of nodes and appears often so their chance of being next to dead characters also increase. But when we forget about the Smith family we also stumble on the infamous Evil Morty, & Worldender. Not surprising again but Beth & Summer better work on their danger game during season 4 otherwise Evil Morty might pass them !</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Species View -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h3>Species View</h3>
+                                    </div>
+
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/characters_network_species.png">
+                                        <figcaption class="caption">The Network By Species</figcaption>
+                                    </figure>
+                                </div>
+
+                                <!-- Communities -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h2>Communities</h2>
+                                    </div>
+                                    <!-- General View -->
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <p> This section analyzes the communities by comparing four different algorithms for community detection. Plots are used to show the structure of communities and which of the main characters are central to a specific community. For instance if Jerry Smith is the central character in a given community nodes will be colored green to match Jerry's awesome shirt. Likewise for Rick, where nodes are colored turquoise to match his pointy hair. If Rick and Morty are both in the same community, nodes will be colored red. For each plot, node sizes are dependent on the size of the communities, such that bigger communities have bigger nodes. </p>
+                                        </div>
+
+                                        <!-- Community Fluid -->
+                                        <div class="row">
+                                            <h3>Community Fluid</h3>
+                                        </div>
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/community_fluid.png">
+                                            <figcaption class="caption">Community Fluid</figcaption>
+                                        </figure>
+                                        <div class="row">
+                                            <p> Comment </p>
+                                        </div>
+
+                                        <!-- Community Greedy -->
+                                        <div class="row">
+                                            <h3>Community Greedy</h3>
+                                        </div>
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/community_greedy_modularity.png">
+                                            <figcaption class="caption">Community Greedy</figcaption>
+                                        </figure>
+                                        <div class="row">
+                                            <p> Comment </p>
+                                        </div>
+
+                                        <!-- Community Greedy -->
+                                        <div class="row">
+                                            <h3>Community Label</h3>
+                                        </div>
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/community_label_propagation.png">
+                                            <figcaption class="caption">Community Label</figcaption>
+                                        </figure>
+                                        <div class="row">
+                                            <p> Comment </p>
+                                        </div>    
+
+                                        <!-- Community Louvain -->
+                                        <div class="row">
+                                            <h3>Community Louvain</h3>
+                                        </div>
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/community_louvain.png">
+                                            <figcaption class="caption">Community Louvain</figcaption>
+                                        </figure>
+                                        <div class="row">
+                                            <p> Comment </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>    
+            </section>
 
-        <!-- Songs -->
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="p-5">
-                        <h2>Songs</h2>
-                        <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+            <!-- Transcript -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <div class="row">
+                                <h1>Episodes Transcripts</h1> 
+                            </div>
+                            <div class="row">
+                                <p>Here come the Natural Langage processing ! We used that magnificent tool tool calculate Sentiment of each season, and see the evolution of the langage over time.</p> 
+                            </div>
+
+                            <!-- Sentiments Scores -->
+                            <div class="container-fluid align-items-center">
+                                <div class="row">
+                                    <h2>Sentiment Scores</h2>
+                                </div>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/sentiment_score_ep.png">
+                                    <figcaption class="caption">Average Sentiment per episodes</figcaption>
+                                </figure>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/sentiment_score_season.png">
+                                    <figcaption class="caption">Average Sentiment per seasons</figcaption>
+                                </figure>
+                                <div class="row">
+                                    <p>Comments</p>
+                                </div>
+
+                            </div>
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h2>It's all about the words !!</h2>
+                                </div>
+                                <div class="row">
+                                    <h3>Swear words !!</h3>
+                                </div>
+                                <div class="row">
+                                    <h3>Made up words !!</h3>
+                                </div>
+                            </div>
+                            <p></p>
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>    
+            </section>    
 
-        <!-- Data -->
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="p-5">
-                        <h4>Data Sources</h4>
-                        <ul>
-                            <li>
-                                <a class="" href="https://rickandmorty.fandom.com/wiki/Rickipedia">[Rickipedia]</a>
-                            </li>
-                            <li>
-                                <a class="" href="https://rickandmortyapi.com/">[Rick & Morty API]</a>
-                            </li>
-                            <li>
-                                <a class="" href="https://github.com/afuh/rick-and-morty-api">[Rick & Morty API on GitHub]</a>
-                            </li>
-
-                        </ul>
+            <!-- Songs -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h2>Songs</h2>
+                            <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>    
+
+            <!-- Data -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h4>Data Sources</h4>
+                            <ul>
+                                <li>
+                                    <a class="" href="https://rickandmorty.fandom.com/wiki/Rickipedia">[Rickipedia]</a>
+                                </li>
+                                <li>
+                                    <a class="" href="https://rickandmortyapi.com/">[Rick & Morty API]</a>
+                                </li>
+                                <li>
+                                    <a class="" href="https://github.com/afuh/rick-and-morty-api">[Rick & Morty API on GitHub]</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer class="py-5 bg-black">
