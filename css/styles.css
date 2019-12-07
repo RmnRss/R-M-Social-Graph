@@ -59,7 +59,7 @@ header.masthead {
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
-    background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("https://hdqwalls.com/wallpapers/rick-and-morty-uy.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
