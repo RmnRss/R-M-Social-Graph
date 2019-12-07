@@ -54,6 +54,10 @@ h6 {
     letter-spacing: 0.1rem;
 }
 
+.navbar-custom .navbar-nav .nav-item .nav-link .active {
+    color: white;
+}
+
 header.masthead {
     position: relative;
     overflow: hidden;
@@ -182,4 +186,8 @@ figcaption{
 
 .caption {
     text-align: center;
+}
+
+.head-section{
+    margin-top: 5rem
 }
