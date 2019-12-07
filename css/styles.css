@@ -160,14 +160,20 @@ header.masthead .bg-circle-4 {
 }
 
 main {
-  width: 90%;
-  margin: 0 auto;
-  /* creates 20% margins on either side */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .full-width {
-  margin-left: -5%;
-  margin-right: -5%;
+    margin-left: -5%;
+    margin-right: -5%;
+    
+    padding: 10px;
+    background-color: #fbfbfb;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #f1f1f1 !important;
+    border-width: thin;
 }
 
 .caption {
