@@ -46,12 +46,10 @@
         </nav>
 
         <!-- Header -->       
-        <header class="masthead text-center text-white">
-            <div class="masthead-content">
-                <div class="container">
-                    <h1 class="masthead-heading mb-0">Rick & Morty</h1>
-                    <h2 class="masthead-subheading mb-0">Through the Schwifty Lens of Data Science</h2>
-                    <a href="https://github.com/RmnRss/rm-social-graphs/" class="btn btn-primary btn-xl rounded-pill mt-5">View On Github</a>
+        <header class="masthead-character text-center text-white">
+            <div class="masthead-content p-5">
+                <div class="container ">
+                    <h1 class="masthead-heading display-4 mb-5 mt-5">Characters Network</h1>
                 </div>
             </div>
         </header>
@@ -63,25 +61,40 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="p-5">
-                            <h1 class="display-4">Characters Network</h1>
-                            <p>In this section, we will discuss all stuff network & Characters !</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Character -->
-            <section>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="p-5">
-                            <!-- Section Title -->
-                            <h1 class="display-4"></h1>
-
+                            
                             <!-- General Facts -->
-                            <div class="row p-5">
-                                <h2>General Facts</h2>
-                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty. Here are a few stats about the characters : </p>
+                            <div class="container-fluid row">
+                                <h1 class="display-4">General Facts</h1>
+                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the one we kept we gathered the following frame :</p>
+
+                                <div class="container full-width">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <div class="p-5">
+                                                <img class="img-fluid rounded-circle" src="https://rickandmortyapi.com/api/character/avatar/254.jpeg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <table style="width:100%">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Specie</th>
+                                                    <th>Status</th>
+                                                    <th>Last Know Location</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ocotpus Man</td>
+                                                    <td>Alien</td>
+                                                    <td>Alive</td>
+                                                    <td>Interdimensional Cable</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <p class="mt-3">We did so for 313 characters that are both in the API & on the Wiki. In the end we ended up with the following characters statistics :</p>
 
                                 <table style="width:100%">
                                     <tr>
@@ -104,20 +117,20 @@
                                     </tr>
                                 </table>
 
-                                <p style="padding-top: 15px">From those number we can see some interesting points, that we decided to look into : So out of 313 characters 36 % of them are dead, interesting. We can also notice that 13 % of the characters are Ricks and that 10% are Mortys.</p>
+                                <p style="padding-top: 15px">From those number we can see some interesting points, that we decided to address : like the fact that <b>36 %</b> of them are dead, or that <b>13 %</b> of the characters are Ricks and that <b>10 %</b> are Mortys.</p>
                             </div>
 
                             <!-- Network -->
-                            <div class="container-fluid row p-5">
-                                <h2>The Network</h2>
+                            <div class="container-fluid row">
+                                <h1 class="display-4">The Network</h1>
 
                                 <!-- About The Network -->
-                                <div class="container-fluid">
+                                <div class="container-fluid p-5">
                                     <div class="row">
                                         <h3>About the Network</h3>
                                     </div>
                                     <div class="row">
-                                        <p>Well nice number aren't they ? But where the fudge did they came from ? Well we used the Rickipedia & the Rick & Morty API to come up with the last numbers. And to create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
+                                        <p>Well nice number aren't they ? But where the fudge did they came from ? Well we used both the the Rickipedia and the Rick & Morty API to come up with the last numbers. We took the well formated informations about characters form the API and we crossed them with the content of the wikipedia pages. To create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
 
                                     </div>
                                 </div>
@@ -332,6 +345,19 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+
+
                         </div>
                     </div>
                 </div>
