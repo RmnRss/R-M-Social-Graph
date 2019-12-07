@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Rick & Morty - SGI</title>    
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+        <!-- Custom fonts for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">Rick & Morty SGI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./characters.html">Characters Network</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nlp.html">Natural Language Processing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./data.html">Data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->       
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container">
+                    <h1 class="masthead-heading mb-0">Rick & Morty</h1>
+                    <h2 class="masthead-subheading mb-0">Through the Schwifty Lens of Data Science</h2>
+                    <a href="https://github.com/RmnRss/rm-social-graphs/" class="btn btn-primary btn-xl rounded-pill mt-5">View On Github</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- Introduction -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h2 class="display-4">Natural Language Processing !</h2>
+                            <p>We used that magnificent tool to analyse episodes transcripts & songs lyrics. In that section of the site we dig through how we did it and our findings !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Episodes Transcripts -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <!-- Section Title -->
+                            <h1 class="display-4">Episodes Transcripts</h1>
+                            
+
+                            <!-- Sentiment Score -->
+                            <div class="container-fluid row p-5">
+                                <!-- General View -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h2>Sentiment Score</h2>
+                                    </div>
+
+                                    <div class="row">
+                                        <p> What is sentiment you may ask ? Well when it comes to data science, sentiment is a measure of how comonly positive a word is. 
+                                            For exemple happy has a very high sentiment score whereas terrible as a bad one. So we took all the sentiment for each words in each transcripts and calculate the avergae sentiment score to have an idea of how good Rick & Morty transcripts were. We got the following results  </p>
+                                    </div>
+
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/sentiment_score_ep.png">
+                                        <figcaption class="caption">The Full Network</figcaption>
+                                    </figure>
+
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/sentiment_score_season.png">
+                                        <figcaption class="caption">Average Sentiment per seasons</figcaption>
+                                    </figure>
+
+                                    <div class="row">
+                                        <p> So it appears that sentiment over the course of time is decreasing when it comes to Rick & Morty but what does that mean ? Well, it means that overall the word chosen by the writters over the season have a worst and worst corellation, but does that means that the episodes are less appreciated ?  </p>
+                                    </div>
+
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/sentiment_score_ep_vs_views.png">
+                                        <figcaption class="caption">Sentiment Score vs. Views in millions</figcaption>
+                                    </figure>
+
+                                    <div class="row">
+                                        <p> Well the upper graphs compares the sentiment score of each episode to their number of views in millions during the premiere in Adult Swim. And clearly, the views are inverted to the sentiment score as the number of views increases when the sentiment score decrease. But this can be explained by the increasing popularity of the show over the years and not really because of the content of the episodes. </p>
+                                    </div>
+
+                                    <div class="row">
+                                        <h3>The most positive character ?</h3>
+                                    </div>
+
+                                    <div class="row">
+                                        <p> We took a deeper look at the sentiment score for Rick & Morty's lines, to see who was contributing the most to the happiness of the show, and see who was the bummer.</p>
+                                    </div>
+
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/rm_sentiment_score.png">
+                                        <figcaption class="caption">Rick vs Morty Sentiment Scores over time</figcaption>
+                                    </figure>
+
+                                    <div class="row">
+                                        <p> Comment </p>
+                                    </div>
+                                </div>
+
+                                <!-- Words -->
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h2>It's all about the words!!</h2>
+                                    </div>
+
+                                    <div class="row">
+                                        <p>Introduce the part</p>
+                                    </div>
+
+                                    <!-- Swear Words -->
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <h3>Swear Words!!</h3>
+                                        </div>
+
+                                        <div class="row">
+                                            <p>Well Rick & Morty is known for it's rough language, so we decided to dig a little deeper into this.</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <p>Well in the last part we introduced you to sentiment score, now let's talk about profanity score ! <b>Explain profanity score</b> Now Let's compare the two to see if they are correlated :</p>
+                                        </div>
+
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/sentiment_vs_profanity_ep.png">
+                                            <figcaption class="caption">Sentiment Score vs. Profanity</figcaption>
+                                        </figure>
+
+                                        <div class="row">
+                                            <p>It appears that they are, does that mean that the more swear words the better the epidode ?</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <h4>Swearing Comparison!</h4>
+                                        </div>
+
+                                        <div class="row">
+                                            <p>We also decided to compare swearing over time and between Rick & Morty, and let's see who's the worst character</p>
+                                        </div>
+
+                                        <figure class="full-width">
+                                            <img class="img-fluid" src="./plots/rm_profanity_score.png">
+                                            <figcaption class="caption">Sentiment Score vs. Profanity</figcaption>
+                                        </figure>
+
+                                        <div class="row">
+                                            <p>While it was closer than we expected for the first two seasons, and at some point Morty was using more swear words than Rick which is mindblowing to think about. But Rick re-establish the true hierarchy for the last season and his score is going miles away from morty's.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Made Up Words -->
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <h3>Made Up Words!!</h3>
+                                        </div>
+
+                                        <div class="row">
+                                            <p>Another facts about Rick & Morty is their creativity when it comes to inventing new funny words, so let's see what we can find in there : </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Songs -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h1 class="display-4">Songs</h1>
+                            <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+
+            <!-- Data -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h1 class="display-4">Data Sources</h1>
+                            <ul>
+                                <li>
+                                    <a href="https://rickandmorty.fandom.com/wiki/Rickipedia">[Rickipedia]</a>
+                                </li>
+                                <li>
+                                    <a href="https://rickandmortyapi.com/">[Rick & Morty API]</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/afuh/rick-and-morty-api">[Rick & Morty API on GitHub]</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-black">
+            <div class="container">
+                <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p>
+                <a class="m-0 text-center text-white small">Website created for the [Social Graphs and Interactions](http://kurser.dtu.dk/course/02805 "Course Description") course at [DTU](https://www.dtu.dk/english "DTU HomePage </a>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
