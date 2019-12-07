@@ -176,6 +176,10 @@ main {
     border-width: thin;
 }
 
+figcaption{
+    font-weight: 700;
+}
+
 .caption {
     text-align: center;
 }
