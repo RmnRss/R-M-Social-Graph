@@ -284,6 +284,9 @@
                                         <figcaption class="caption">Community Fluid</figcaption>
                                     </figure>
                                     <div class="row">
+                                        <p>Modularity : <b>0.41</b></p>
+                                    </div>
+                                    <div class="row">
                                         <p>The fluid communities algorithm requires defining <i>k</i> number of communities, since it assigns communities randomly to <i>k</i> nodes and divides communitites by randomly iterating over nodes and assigning them to communities based on which communities the neighbors of the given node are divided into. This randomization results in more distinct communities than some of the other algorithms. </p>
                                     </div>
 
@@ -295,6 +298,9 @@
                                         <img class="img-fluid" src="./plots/community_greedy_modularity.png">
                                         <figcaption class="caption">Community Greedy</figcaption>
                                     </figure>
+                                    <div class="row">
+                                        <p>Modularity : <b>0.48</b></p>
+                                    </div>
                                     <div class="row">
                                         <p> The greedy modularity maximization divides characters into communities decreasing by modularity, i.e. the first community will have the highest modularity. As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon maximization of modularity, a few big communities exist. This is due to the high degrees of Rick and Morty. This algorithm, as described by it's name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm. </p>
                                     </div>
@@ -308,6 +314,9 @@
                                         <figcaption class="caption">Community Label</figcaption>
                                     </figure>
                                     <div class="row">
+                                        <p>Modularity : <b>0.24</b></p>
+                                    </div>
+                                    <div class="row">
                                         <p> The label propagation algorithm performs worst of all the algorithms, when considering modularity. All members of the Smith family are clustered together into one large community that dominates the graph, also visually. This large community exists because of the labelling approach used by the algorithm, where nodes are divided into communities if their neighbors contain similar labels. This approach will enhance communities with high-degree nodes, thus generating this dominant community containing all members of the family. </p>
                                     </div>    
 
@@ -319,6 +328,9 @@
                                         <img class="img-fluid" src="./plots/community_louvain.png">
                                         <figcaption class="caption">Community Louvain</figcaption>
                                     </figure>
+                                     <div class="row">
+                                        <p>Modularity : <b>0.45</b></p>
+                                    </div>
                                     <div class="row">
                                         <p> What is interesting about the Louvain algorithm is that the approach it uses to divide communities is similar to greedy modularity maximization. The major difference is the initial grouping of nodes locally. Perhaps this local grouping is the reason why Rick and Morty reside in separate communities, as compared to the greedy modularity maximization algorithm. </p>
                                     </div>
