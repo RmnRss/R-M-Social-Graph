@@ -191,3 +191,12 @@ figcaption{
 .head-section{
     margin-top: 5rem
 }
+
+.table-fit tr td:last-child{
+    width:1%;
+    white-space:nowrap;
+}
+
+.table-fit tr td, .table-fit tr th{
+        padding: 5px;
+}

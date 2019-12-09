@@ -159,12 +159,12 @@
                                         <h2>Degree Analysis</h2>
                                     </div>
                                     <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/degree_distribution.png">
+                                        <img class="img-fluid" src="./plots/distribution_degree.png">
                                         <figcaption class="caption">The General Degree Distribution</figcaption>
                                     </figure> 
 
                                     <div class="row">
-                                        <p>Well nothing very surprising here, lots of characters only know a few others, which makes sense considering the structure of the series, which focus on random adventures over episodes And of course the mains characters have a lot of connexion e.g Rick, Morty, Jerry, Beth.</p>
+                                        <p>Well nothing very surprising here, Rick & Morty, as well as their family members, have a big amounts of nodes compared to other characters. Lots of other characters only know a few others, which makes sense considering the structure of the series, which focus on random adventures over episodes.</p>
                                     </div>
                                 </div>
 
@@ -174,17 +174,17 @@
                                         <h2>Centrality</h2>
                                     </div>
 
-                                    <!-- Centrality Betweenness -->
+                                    <!-- Betweenness Centrality -->
                                     <div class="row">
-                                        <h3>Centrality Betweenness</h3>
+                                        <h3>Betweenness Centrality</h3>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/centrality_betweenness.png">
-                                        <figcaption class="caption">Centrality Betweeness</figcaption>
+                                        <figcaption class="caption">Betweeness vs Degree Cenrtality</figcaption>
                                     </figure>
+                                    
                                     <div class="row">
-                                        <p>Since betweenness is a measure of which node has the most shortest paths going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network.</p>
-                                        <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
+                                        <p>Since betweenness is a measure of which node has the most shortest paths going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network. As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
                                     </div>
 
                                     <!-- Centrality Eigenvector -->
@@ -269,19 +269,34 @@
                                     <div class="row">
                                         <h2>Communities</h2>
                                     </div>
-
+                                    
+                                    <!-- Community Introduction -->
                                     <div class="row">
                                         <p> This section analyzes the communities by comparing four different algorithms for community detection. Plots are used to show the structure of communities and which of the main characters are central to a specific community. For instance if Jerry Smith is the central character in a given community nodes will be colored green to match Jerry's awesome shirt. Likewise for Rick, where nodes are colored turquoise to match his pointy hair. If Rick and Morty are both in the same community, nodes will be colored in a flashy green to recall the portal gun. For each plot, node sizes are dependent on the size of the communities, such that bigger communities have bigger nodes. </p>
                                     </div>
-
-                                    <!-- General View -->
+                                    
+                                    <!-- Community Greedy -->
+                                    <div class="row">
+                                        <h3>Greedy Communities</h3>
+                                    </div>
+                                    <figure class="full-width">
+                                        <img class="img-fluid" src="./plots/community_greedy_modularity.png">
+                                        <figcaption class="caption">Greedy Communities</figcaption>
+                                    </figure>
+                                    <div class="row">
+                                        <p>Modularity : <b>0.48</b></p>
+                                    </div>
+                                    <div class="row">
+                                        <p> The greedy modularity maximization divides characters into communities decreasing by modularity, i.e. the first community will have the highest modularity. As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon maximization of modularity, a few big communities exist. This is due to the high degrees of Rick and Morty. This algorithm, as described by it's name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm. </p>
+                                    </div>
+                                    
                                     <!-- Community Fluid -->
                                     <div class="row">
-                                        <h3>Community Fluid</h3>
+                                        <h3>Fluid Communities</h3>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/community_fluid.png">
-                                        <figcaption class="caption">Community Fluid</figcaption>
+                                        <figcaption class="caption">Fluid Communities</figcaption>
                                     </figure>
                                     <div class="row">
                                         <p>Modularity : <b>0.41</b></p>
@@ -290,43 +305,28 @@
                                         <p>The fluid communities algorithm requires defining <i>k</i> number of communities, since it assigns communities randomly to <i>k</i> nodes and divides communitites by randomly iterating over nodes and assigning them to communities based on which communities the neighbors of the given node are divided into. This randomization results in more distinct communities than some of the other algorithms. </p>
                                     </div>
 
-                                    <!-- Community Greedy -->
-                                    <div class="row">
-                                        <h3>Community Greedy</h3>
-                                    </div>
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/community_greedy_modularity.png">
-                                        <figcaption class="caption">Community Greedy</figcaption>
-                                    </figure>
-                                    <div class="row">
-                                        <p>Modularity : <b>0.48</b></p>
-                                    </div>
-                                    <div class="row">
-                                        <p> The greedy modularity maximization divides characters into communities decreasing by modularity, i.e. the first community will have the highest modularity. As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon maximization of modularity, a few big communities exist. This is due to the high degrees of Rick and Morty. This algorithm, as described by it's name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm. </p>
-                                    </div>
-
                                     <!-- Community Label -->
                                     <div class="row">
-                                        <h3>Community Label</h3>
+                                        <h3>Label Propagation Communities</h3>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/community_label_propagation.png">
-                                        <figcaption class="caption">Community Label</figcaption>
+                                        <figcaption class="caption">Label Propagation Communities</figcaption>
                                     </figure>
                                     <div class="row">
                                         <p>Modularity : <b>0.24</b></p>
                                     </div>
                                     <div class="row">
-                                        <p> The label propagation algorithm performs worst of all the algorithms, when considering modularity. All members of the Smith family are clustered together into one large community that dominates the graph, also visually. This large community exists because of the labelling approach used by the algorithm, where nodes are divided into communities if their neighbors contain similar labels. This approach will enhance communities with high-degree nodes, thus generating this dominant community containing all members of the family. </p>
+                                        <p>The label propagation algorithm performs worst of all the algorithms, when considering modularity. All members of the Smith family are clustered together into one large community that dominates the graph, also visually. This large community exists because of the labelling approach used by the algorithm, where nodes are divided into communities if their neighbors contain similar labels. This approach will enhance communities with high-degree nodes, thus generating this dominant community containing all members of the family. </p>
                                     </div>    
 
                                     <!-- Community Louvain -->
                                     <div class="row">
-                                        <h3>Community Louvain</h3>
+                                        <h3>Louvain Communities</h3>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/community_louvain.png">
-                                        <figcaption class="caption">Community Louvain</figcaption>
+                                        <figcaption class="caption">Louvain Communities</figcaption>
                                     </figure>
                                      <div class="row">
                                         <p>Modularity : <b>0.45</b></p>
