@@ -228,3 +228,12 @@ figcaption{
 .btn-align-right {
     justify-content: flex-end !important;
 }
+
+.custom-table {
+    padding: 5px;
+    border: solid;
+    border-radius: 2px;
+    border-color: #f1f1f1 !important;
+    border-width: thin;
+    text-align: center;
+}

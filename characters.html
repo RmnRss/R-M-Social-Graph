@@ -59,38 +59,28 @@
                             <h1 class="display-4">General Facts</h1>
 
                             <div class="container-fluid row p-5">
-                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the characters we gathered the following information :</p>
+                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the one we kept we gathered the following frame :</p>
 
-                                <div class="container full-width">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-6">
-                                            <div class="p-5">
-                                                <img class="img-fluid rounded-circle" src="https://rickandmortyapi.com/api/character/avatar/254.jpeg" alt="">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <!-- Characters Network Card -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Character Frame</h5>
+                                                <p class="card-text"><b>Name:</b> Octopus Man</p>
+                                                <p><b>Specie:</b> Alien </p>
+                                                <p><b>Status:</b> Alive</p>
+                                                <p><b>Last Know Location:</b> Interdimensional Cable</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <table style="width:100%">
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Specie</th>
-                                                    <th>Status</th>
-                                                    <th>Last Know Location</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ocotpus Man</td>
-                                                    <td>Alien</td>
-                                                    <td>Alive</td>
-                                                    <td>Interdimensional Cable</td>
-                                                </tr>
-                                            </table>
-                                        </div>
+
                                     </div>
                                 </div>
 
 
-                                <p class="mt-3">We did so for 313 characters using both the <a href="https://rickandmortyapi.com/">Rick & Morty API</a> & <a href="https://rickandmorty.fandom.com/wiki/Rickipedia">Rickipedia</a>, a fandom wiki page dedicated to the explore the amazing world of Rick & Morty. In the end we ended up with the following characters statistics :</p>
+                                <p class="mt-3">We did so for 313 characters using both the <a href="https://rickandmortyapi.com/">Rick & Morty API</a> & <a href="https://rickandmorty.fandom.com/wiki/Rickipedia">Rickipedia</a>, a fandom wiki page dedicated to the explore the amazing world of Rick & Morty. Overall, the characters statistics are looking like this:</p>
 
-                                <table style="width:100%">
+                                <table class="custom-table w-100 mt-2 mb-2">
                                     <tr>
                                         <th>Total</th>
                                         <th>Ricks</th>
@@ -111,7 +101,7 @@
                                     </tr>
                                 </table>
 
-                                <p style="padding-top: 15px">From those numbers, we can see some interesting points, that we decided to address: like the fact that <b>36 %</b> of them are dead, or that <b>13 %</b> of the characters are Ricks and that <b>10 %</b> are Mortys.</p>
+                                <p>From those numbers, we can see some interesting points, we decided to address the fact that <b>36 %</b> of them are dead. So we are gonna look deeper at the characters status in the Network and try to find a responsible for all those death! We can also noticed that <b>13 %</b> of the characters are Ricks and that <b>10 %</b> are Mortys, so we might take a deeper look at character diversity, and there species.</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +125,7 @@
                                         <h3>About the Network</h3>
                                     </div>
                                     <div class="row">
-                                        <p>Well nice numbers, aren't they ? But where the fudge did they come from ? <br/> - We used both Rickipedia and the Rick & Morty API to come up with the last numbers. We took the well-formatted information about characters from the API and we crossed them with the contents of the wikipedia pages. To create the networks we parsed each Wikipedia page of the characters to find hyperlinks to other characters. When a link was found we created an edge (a link/connection) from the given character to the other character. </p>
+                                        <p>From the 313 characters information we just talked about, we created a "Characters Network".<br/> - We used both Rickipedia and the Rick & Morty API to come up with the last numbers. We took the well-formatted information about characters from the API and we crossed them with the contents of the wikipedia pages. To create the networks we parsed each Wikipedia page of the characters to find hyperlinks to other characters. When a link was found we created an edge (a link/connection) from the given character to the other character. </p>
                                     </div>
                                 </div>
 
@@ -168,7 +158,7 @@
                                     </figure> 
 
                                     <div class="row">
-                                        <p>Nothing very surprising here, Rick & Morty, as well as their family members, have a big amount of links compared to other characters. Lots of other characters only know a few others, which makes sense considering the structure of the series, where most episodes consist of random adventures with a lot of different characters throughout the episodes.</p>
+                                        <p>When we think about it, the plot above has nothing very surprising. It just confirms something that was expected : Rick & Morty, as well as their family members, have a big amount of nodes compared to other characters. What is more interesting is that lots of other characters only know a few others, which makes sense considering the structure of the series. As the show focuses on entirely different random adventures for each episodes, it's logicial sense that only the main characters living those adventures have a lot of connexions to a lot of them whereas most of the other characters will never get to meet each other.</p>
                                     </div>
                                 </div>
 
@@ -177,13 +167,15 @@
                                     <div class="row">
                                         <h2>Centrality</h2>
                                     </div>
-
+                                    
+                                    <p class="w-100">Centrality assigns an importance score to a node based purely on its number of nodes. So taking a look at centrality tells us which characters are the most popular, or which character to know if I want to know another one.So let's look at which of our characters are the most central.</p>
+                                    
                                     <!-- Betweenness Centrality -->
                                     <div class="row">
                                         <h3>Betweenness Centrality</h3>
                                     </div>
                                     <div class="row">
-                                        <p>Since betweenness is a measure of which node has the most shortest paths from A to B going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network.</p>
+                                        <p>Since betweenness is a measure of which node has the shortest paths from A to B going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network.</p>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/centrality_betweenness.png">
@@ -191,7 +183,7 @@
                                     </figure>
                                     
                                     <div class="row">
-                                        <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
+                                        <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members. So if I'm a new character in Rick & Morty and I want to meet another one, the optimal way is to ask Rick first, then Morty, then Jerry (you might not want to do that, or the conversation might get very boring), etc.</p>
                                     </div>
 
                                     <!-- Centrality Eigenvector -->
@@ -206,7 +198,7 @@
                                         <figcaption class="caption">Centrality Betweeness</figcaption>
                                     </figure>
                                     <div class="row">
-                                        <p>Again, Morty and Rick appear with highest centrality, whereas Jerry is on fifth place. Perhaps, like explained above with betweenness, because he is on many adventures in different locations, where a lot of characters with low degrees appear. Simply because these characters appear in locations that make them isolated from the rest of the network.</p>
+                                        <p>Again, Morty and Rick appear with highest centrality, whereas Jerry is on fifth place. Perhaps, like explained above with betweenness, because he is on many adventures in different locations, where a lot of characters with low degrees appear. So that makes Jerry popular...</p>
                                     </div>
 
                                     <div class="row">
@@ -214,7 +206,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <p>Well so far we haven't realized anything surprising. But is it a bad sign ? No it's actually a good sign because it shows that the data we collected is in correlation with the show which is a very good things this far !</p>
+                                        <p>Well so far we haven't realized anything surprising. But is it a bad sign ? No it's actually a good sign because it shows that the data we collected is in correlation with the show which is a very good things this far!</p>
                                     </div>
 
                                 </div>
@@ -226,14 +218,14 @@
                                         <h2>Status View</h2>
                                     </div>
                                     <div class="row">
-                                        <p> Another fact about Rick & Morty is that it involves LOTS and LOTS of death. Luckily our data sources included this information about the characters so we decided to look into that, and we started by plotting the following network, depicting alive characters as <b style="color: #53FF11">green</b> nodes, dead characters as <b style="color: #FF0000">red</b> nodes, and those nodes with "unknown" status are <b>black</b> : </p>
+                                        <p> Another fact about Rick & Morty is that it involves LOTS and LOTS of death. Luckily our data sources included this information about the characters so we decided to look into that, to find the "most dangerous character" of the show. We started by plotting the following network, depicting alive characters as <b style="color: #53FF11">green</b> nodes, dead characters as <b style="color: #FF0000">red</b> nodes, and those nodes with "unknown" status are <b>black</b> : </p>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/characters_network_status.png">
                                         <figcaption class="caption">The Network by Status</figcaption>
                                     </figure>
                                     <div class="row">
-                                        <p> Mmmh out so out of <b>313</b> characters <b>114</b> are dead... Our first thought was to find who was responsible for all those dead, who could be the most dangerous characters of the show?</p>
+                                        <p> Mmmh out so out of <b>313</b> characters <b>114</b> are dead... Can we find the responsible for all those dead bodies, who could be the most dangerous characters of the show?</p>
                                     </div>
 
                                     <!-- Most Dangerous -->
@@ -271,7 +263,7 @@
                                     </figure>
 
                                     <div class="row">
-                                        <p>As shown by the figure, there are actually 10 known species at the moment. We wonder how many more will be added in season 4 on the new adventures of Rick & Morty to distants dimensions. While humans are still the most represented, we really appreciate the presence of all the others !</p>
+                                        <p>As shown by the figure, there are actually 10 known species at the moment. We wonder how many more will be added in season 4 on the new adventures of Rick & Morty to distants dimensions. While humans are still the most represented, we really enjoy the presence of all the others !</p>
                                     </div>
                                 </div>
 
