@@ -163,6 +163,8 @@ header.masthead .bg-circle-4 {
     box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
 }
 
+/* Added by RmnRss */
+
 main {
     width: 90%;
     margin: 0 auto;
@@ -203,4 +205,11 @@ figcaption{
 
 .para-row {
     width: 100%;
+}
+
+.btn-card {
+    color: #0067d2 !important;
+    font-weight: 500 !important;
+    border: 2px solid !important;
+    border-color: #0067d2;
 }
