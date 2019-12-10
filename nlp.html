@@ -58,195 +58,375 @@
                             <!-- Sentiment Score -->
                             <div class="container-fluid row p-5">
                                 <!-- General View -->
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <h2>Sentiment Analysis</h2>
-                                    </div>
+                                <div class="row">
+                                    <h2>Sentiment Analysis</h2>
+                                </div>
 
-                                    <div class="row">
-                                        <p> The first type of analysis we ran through the episode transcript, was a Sentiment Analysis.
-                                            What is sentiment you may ask ? Well when it comes to data science, sentiment is a measure of how word is perceived by people. Depending on the perception (positive or negative) each word is given a grade from 0 (very bad) to 9 (very good) a word is. For exemple "love" has a very high sentiment score, whereas "terror" as a very bad one.</p>
-                                        <p>So we used a data base of words and their sentiment score to calculate the average sentiment score of each episodes. This way we could to have an idea of how Rick & Morty langage would be perceived. We got the following results :  </p>
-                                    </div>
+                                <div class="row">
+                                    <p> The first type of analysis we ran through the episode transcript, was a Sentiment Analysis.
+                                        What is sentiment you may ask ? Well when it comes to data science, sentiment is a measure of how word is perceived by people. Depending on the perception (positive or negative) each word is given a grade from 0 (very bad) to 9 (very good) a word is. For exemple "love" has a very high sentiment score, whereas "terror" as a very bad one.</p>
+                                    <p>So we used a data base of words and their sentiment score to calculate the average sentiment score of each episodes. This way we could to have an idea of how Rick & Morty langage would be perceived. We got the following results :  </p>
+                                </div>
 
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/sentiment_score_ep.png">
-                                        <figcaption class="caption">Average sentiment score per episode</figcaption>
-                                    </figure>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/sentiment_score_ep.png">
+                                    <figcaption class="caption">Average sentiment score per episode</figcaption>
+                                </figure>
 
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/sentiment_score_season.png">
-                                        <figcaption class="caption">Average Sentiment per seasons</figcaption>
-                                    </figure>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/sentiment_score_season.png">
+                                    <figcaption class="caption">Average Sentiment per seasons</figcaption>
+                                </figure>
 
-                                    <div class="row">
-                                        <p> So it appears that overall the sentiment score of each episode and season is just arounf the average. But the general reviews of Rick & Morty often shows that it's a pretty fun and happy show, so how could that be explained ?</p>
-                                        <p>There is a few things to consider, the first one being <b>swearing</b>, there is a lot of swearing in the show, and most of the time the sentiment score of a swear word isn't that good. Whereas R&M audience might find this overuse of swearing pretty funny. So this is something that might have deacrease the overall scores. But we will discuss swearing a lot more later on !<br> The second element to consider is also the word creativity is Rick & Morty, new words appears every episodes, new puns etc. All those new words are not taken into consideration when calculating sentiment scores, even though they are also well perceived and are a reason R&M is a high rated show.</p>
+                                <div class="row">
+                                    <p> So it appears that overall the sentiment score of each episode and season is just arounf the average. But the general reviews of Rick & Morty often shows that it's a pretty fun and happy show, so how could that be explained ?</p>
+                                    <p>There is a few things to consider, the first one being <b>swearing</b>, there is a lot of swearing in the show, and most of the time the sentiment score of a swear word isn't that good. Whereas R&M audience might find this overuse of swearing pretty funny. So this is something that might have deacrease the overall scores. But we will discuss swearing a lot more later on !<br> The second element to consider is also the word creativity is Rick & Morty, new words appears every episodes, new puns etc. All those new words are not taken into consideration when calculating sentiment scores, even though they are also well perceived and are a reason R&M is a high rated show.</p>
 
-                                        <p>Then we can notice another trend while looking at the last numbers, over the course of time the score is decreasing when it comes to Rick & Morty. <br> It might an hint, that overall the choices of words are changing and not in a good way. The words chosen by the wirtters are getting more rough over the course of time. But that does that means that the episodes are less appreciated ? </p>
-                                    </div>
+                                    <p>Then we can notice another trend while looking at the last numbers, over the course of time the score is decreasing when it comes to Rick & Morty. <br> It might an hint, that overall the choices of words are changing and not in a good way. The words chosen by the wirtters are getting more rough over the course of time. But that does that means that the episodes are less appreciated ? </p>
+                                </div>
 
-                                    <h3 class="row">Comparing Sentiment to IMDB Ratings</h3>
+                                <h3 class="row">Comparing Sentiment to IMDB Ratings</h3>
 
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/sentiment_score_ep_vs_ratings.png">
-                                        <figcaption class="caption">Sentiment Score vs. IMDB Ratings</figcaption>
-                                    </figure>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/sentiment_score_ep_vs_ratings.png">
+                                    <figcaption class="caption">Sentiment Score vs. IMDB Ratings</figcaption>
+                                </figure>
 
-                                    <div class="row">
-                                        <p> To answer the last question we decided to fetch IMDB ratings of the show and to compare them to sentiment score to see if there were any correlation between the two. <br> And well, even though the sentiment score deacreases over time, the ratings do not and they even reach their all time high for the last season of the show. So maybe sentiment wasn't really the best way to analyse Rick & Morty language. But we'll give it one last chance : </p>
-                                    </div>
+                                <div class="row">
+                                    <p> To answer the last question we decided to fetch IMDB ratings of the show and to compare them to sentiment score to see if there were any correlation between the two. <br> And well, even though the sentiment score deacreases over time, the ratings do not and they even reach their all time high for the last season of the show. So maybe sentiment wasn't really the best way to analyse Rick & Morty language. But we'll give it one last chance : </p>
+                                </div>
 
-                                    <div class="row">
-                                        <h3>The most positive character ?</h3>
-                                    </div>
+                                <div class="row">
+                                    <h3>The most positive character ?</h3>
+                                </div>
 
-                                    <div class="row">
-                                        <p> We took a deeper look at the sentiment score for Rick & Morty especially. We ran the sentiment score algortihm only for their lines, to see who was contributing the most to the happiness of the show, and see who was the bummer.</p>
-                                    </div>
+                                <div class="row">
+                                    <p> We took a deeper look at the sentiment score for Rick & Morty especially. We ran the sentiment score algortihm only for their lines, to see who was contributing the most to the happiness of the show, and see who was the bummer.</p>
+                                </div>
 
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/rm_sentiment_score.png">
-                                        <figcaption class="caption">Rick vs Morty sentiment scores over time</figcaption>
-                                    </figure>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/rm_sentiment_score.png">
+                                    <figcaption class="caption">Rick vs Morty sentiment scores over time</figcaption>
+                                </figure>
 
-                                    <div class="row">
-                                        <p> First we can see that Rick & Morty's lines are aligned with the prevous results we got, when their sentiment score decreases so does the all shows. Apart from that, both characters' way of expressing themselves is full of ups and downs. The only clear conclusion here is that the second half of the last season was the least sentimental one for Rick and Morty. </p>
-                                    </div>
+                                <div class="row">
+                                    <p> First we can see that Rick & Morty's lines are aligned with the prevous results we got, when their sentiment score decreases so does the all shows. Apart from that, both characters' way of expressing themselves is full of ups and downs. The only clear conclusion here is that the second half of the last season was the least sentimental one for Rick and Morty. </p>
                                 </div>
 
                                 <!-- Words -->
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <h2>It's all about the words!!</h2>
+                                <div class="row">
+                                    <h2>It's all about the words!!</h2>
+                                </div>
+
+                                <p>Enough about sentiment, we clearly just realized that sentiment could not really give us the full taste of Rick & Morty. So we'll dive deeper into swear words and words creativity.</p>
+
+                                <!-- Top Words R&M -->
+                                <div class="row">
+                                    <h3>Most used words for Rick & Morty</h3>
+                                </div>
+
+                                <div class="row">
+                                    <p>A funny thing to do when you have access to transcript is to look for the most fequent words. We did by parsing transcripts and applying TF-IDF to their respective lines. We manage to find the top words for Rick & Morty that we snapped into some <b>swifty</b> word clouds : </p>
+                                </div>
+
+                                <div class="row full-width mb-3">
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_morty.png">
+                                            <figcaption class="caption">Morty's word clouds</figcaption>
+                                        </figure>
                                     </div>
-
-                                    <p>Enough about sentiment, we clearly just realized that sentiment could not really give us the full taste of Rick & Morty. So we'll dive deeper into swear words and words creativity.</p>
-
-                                    <!-- Top Words -->
-                                    <div class="row">
-                                        <h3>Top words for Rick & Morty</h3>
-                                    </div>
-
-                                    <div class="row">
-                                        <p>A funny thing to do when you have access to transcript is to look for the most fequent words. We did by parsing transcripts and applying TF-IDF to their respective lines. We manage to find the Top 3 words for Rick & Morty : </p>
-                                    </div>
-
-                                    <div class="row full-width mb-3">
-                                        <div class="col-6">
-                                            <table class="text-center" style="width: 100%">
-                                            <tr>
-                                                <th>
-                                                    <h4>Rick's Top 3</h4>
-                                                </th>
-                                            </tr>
-                                                <tr>
-                                                    <td>burps</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>sauce</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>new</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        
-                                        <div class="col-6">
-                                            <table class="text-center" style="width: 100%">
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
                                             <tr>
                                                 <th>
                                                     <h4>Morty's Top 3</h4>
                                                 </th>
                                             </tr>
-                                                <tr>
-                                                    <td>ooh</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>poncho</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>bailed</td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                            <tr>
+                                                <td>ooh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>poncho</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bailed</td>
+                                            </tr>
+                                        </table>
                                     </div>
-                                    <div class="row">
-                                        <p>As it turns out, the words with the highest TF-IDF scores describe quite well the characters. Morty's infamous <b>'ohh'</b> is the most typical response of his - no matter if he's bored, happy, or terrfied - his reaction usually comes down to emotionless 'ooh'. But then he apparently mentions "poncho" a lot too ?! And "bailed" isn't too surprising as Morty's word are often "Thanks for bailing me out Rick" .<br> For Rick, it's even more iconic. Maybe it's not a word but still - Rick <b>burps</b> all the time, and here we see that it was always carefully noted down in the transcript files. Rick also loves mentioning sauce and the world "new". The later being less suprising as he also invents or discovers new stuffs.
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <b> We also created some sexy word clouds </b>
+                                </div>
+
+                                <div class="row">
+                                    <p> As it turns out, the words with the highest TF-IDF scores describe quite well the characters. Morty's infamous <b>'ohh'</b> is the most typical response of his - no matter if he's bored, happy, or terrfied - his reaction usually comes down to emotionless 'ooh'. But then he apparently mentions "poncho" a lot too ?! And "bailed" isn't too surprising as Morty's word are often "Thanks for bailing me out Rick" . </p>
+                                </div>
+
+                                <div class="row full-width mb-3">
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
+                                            <tr>
+                                                <th>
+                                                    <h4>Rick's Top 3</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>burps</td>
+                                            </tr>
+                                            <tr>
+                                                <td>sauce</td>
+                                            </tr>
+                                            <tr>
+                                                <td>new</td>
+                                            </tr>
+                                        </table>
                                     </div>
 
-                                    <!-- Swear Words -->
-                                    <div class="row">
-                                        <h3>Swearing Analysis</h3>
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_rick.png">
+                                            <figcaption class="caption">Rick's word clouds</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+
+                                <div class="row">
+                                    <p>For Rick, it's even more iconic. Maybe it's not a word but still - Rick <b>burps</b> all the time, and here we see that it was always carefully noted down in the transcript files. Rick also loves mentioning sauce and the world "new". The later being less suprising as he also invents or discovers new stuffs.
+                                    </p>
+                                </div>
+
+                                <!-- Top Words per Seasons -->
+                                <div class="row">
+                                    <h3>Most used words per seasons</h3>
+                                </div>
+
+                                <div class="row">
+                                    <p>We applied the same method mentioned for the last part to get the seasonal topics of Rick & Morty :</p>
+                                </div>
+
+                                <div class="row full-width mb-3">
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_season_1.png">
+                                            <figcaption class="caption">Season 1 Word Cloud</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
+                                            <tr>
+                                                <th>
+                                                    <h4>Top 10</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>meeseeks</td>
+                                            </tr>
+                                            <tr>
+                                                <td>needful</td>
+                                            </tr>
+                                            <tr>
+                                                <td>snuffles</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bloom</td>
+                                            </tr>
+                                            <tr>
+                                                <td>jacob</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pluto</td>
+                                            </tr>
+                                            <tr>
+                                                <td>dream</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pancakes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>doofus</td>
+                                            </tr>
+                                            <tr>
+                                                <td>science</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <p> Comment</p>
+                                </div>
+
+                                <div class="row full-width mb-3">
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
+                                            <tr>
+                                                <th>
+                                                    <h4>Top 10</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>testicle</td>
+                                            </tr>
+                                            <tr>
+                                                <td>gary</td>
+                                            </tr>
+                                            <tr>
+                                                <td>jerrys</td>
+                                            </tr>
+                                            <tr>
+                                                <td>feels</td>
+                                            </tr>
+                                            <tr>
+                                                <td>purge</td>
+                                            </tr>
+                                            <tr>
+                                                <td>deer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>doctor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>poopybutthole</td>
+                                            </tr>
+                                            <tr>
+                                                <td>nathan</td>
+                                            </tr>
+                                            <tr>
+                                                <td>summers</td>
+                                            </tr>
+                                        </table>
                                     </div>
 
-                                    <div class="row">
-                                        <p>Rick & Morty is known for it's rough language, so we decided to dig a little deeper into this.</p>
-                                    </div>
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_season_2.png">
+                                            <figcaption class="caption">Season 2 Word Cloud</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
 
-                                    <div class="row">
-                                        <p>Well a little bit higher up that page we introduced you to sentiment score, now let's talk about profanity score! We used the <a href="https://github.com/vzhou842/profanity-check">profanity check library</a> to calculate it but what does it do ? When given a string it analyze it and give you back a probability (score between 0 and 1) of the string to be offensive. So "F*** you!" would return 1, whereas "go to hell, you scum!" would return something around 0.8. So using this library on the transcript can tell you if they are more or less offensive.</p>
-                                    </div>
-                                    
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/profanity_score_ep.png">
-                                        <figcaption class="caption">Profanity score per episode</figcaption>
-                                    </figure>
-                                    
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/profanity_score_season.png">
-                                        <figcaption class="caption">Profanity score per season</figcaption>
-                                    </figure>
-                                    
-                                    <div class="row">
-                                        <p>First we can notice that profanity score are pretty low on a scale to one, they are all around 0.12. This can be explained by the fact that we are calculating profanity score on average, and most of the transcript are not swears, so that would defenitely lower the score. <br>If we are now looking at scores over time they are all the same over the seasons, except for the last one who has slightly lower average, so that proably means less swear words. So if we think back at our sentiment analysis we can probably forget the hypothesis that stated that swear words would lower the score for the last season.  </p>
-                                    </div>
 
-                                    <h3 class="row">Comparing Sentiment to IMDB Ratings</h3>
-                                    
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/ratings_vs_profanity_ep.png">
-                                        <figcaption class="caption">Profanity Score vs. Ratings</figcaption>
-                                    </figure>
+                                <div class="row">
+                                    <p>Comment</p>
+                                </div>
 
-                                    <div class="row">
-                                        <p>As we did for the sentiment score let's compare profanity score and ratings to see if it actually matters. And it appears that it does, ratings and profanity score, for the most part seems to be in sync, does that mean that the more swear words the better the episode ? From our point of you it's not the only parameters but yes it counts !</p>
+                                <div class="row full-width mb-3">
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_season_3.png">
+                                            <figcaption class="caption">Season 3 Word Cloud</figcaption>
+                                        </figure>
                                     </div>
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
+                                            <tr>
+                                                <th>
+                                                    <h4>Top 10</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>pickle</td>
+                                            </tr>
+                                            <tr>
+                                                <td>toxic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ants</td>
+                                            </tr>
+                                            <tr>
+                                                <td>citadel</td>
+                                            </tr>
+                                            <tr>
+                                                <td>wong</td>
+                                            </tr>
+                                            <tr>
+                                                <td>candidate</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mechanical</td>
+                                            </tr>
+                                            <tr>
+                                                <td>campaign</td>
+                                            </tr>
+                                            <tr>
+                                                <td>manager</td>
+                                            </tr>
+                                            <tr>
+                                                <td>cornvelious</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
 
-                                    <div class="row">
-                                        <h4>Swearing Contest !</h4>
-                                    </div>
+                                <div class="row">
+                                    <p>This Word Cloud is also influence a lot by the them of the episodes, clearly with the presence of one of the most famous quote of the show : "I'm Pickle Riiiiiiiick !"</p>
+                                </div>
 
-                                    <div class="row">
-                                        <p>It has become tradition for us, to compare Rick & Morty's line. Let's do it again for swearing!</p>
-                                    </div>
+                                <!-- Swear Words -->
+                                <div class="row">
+                                    <h3>Swearing Analysis</h3>
+                                </div>
 
-                                    <figure class="full-width">
-                                        <img class="img-fluid" src="./plots/rm_profanity_score.png">
-                                        <figcaption class="caption">Sentiment Score vs. Profanity</figcaption>
-                                    </figure>
+                                <div class="row">
+                                    <p>Rick & Morty is known for it's rough language, so we decided to dig a little deeper into this.</p>
+                                </div>
 
-                                    <div class="row">
-                                        <p>The plot above gives an insight into how the vulgarity of the Rick's and Morty's language was changing over time. On the x-axis there are seasons (divided into halves: a and b) while the y-axis represents the profanity score. Morty's style is more or less consistent through-out 3 seasons with the peak somewhere between the end of season 2 and the beginning of season 3. When it comes to Rick, here the analysis becomes a bit more interesting. From the very beginning of the series till the first half of season 2 his profanity score fluctuates around the same values as Morty did. But in the second half of the last season the number of the swear words skyrockets, while the Morty's score declines sharply. One could put forward a thesis that the Rick's language became much vulgar under the influence of Morty, while Morty's temperament melted down.</p>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <p>So again Rick wins the price !</p>
-                                    </div>
+                                <div class="row">
+                                    <p>Well a little bit higher up that page we introduced you to sentiment score, now let's talk about profanity score! We used the <a href="https://github.com/vzhou842/profanity-check">profanity check library</a> to calculate it but what does it do ? When given a string it analyze it and give you back a probability (score between 0 and 1) of the string to be offensive. So "F*** you!" would return 1, whereas "go to hell, you scum!" would return something around 0.8. So using this library on the transcript can tell you if they are more or less offensive.</p>
+                                </div>
 
-                                    <!-- Made Up Words -->
-                                    <div class="row">
-                                        <h3>Made Up Words!!</h3>
-                                    </div>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/profanity_score_ep.png">
+                                    <figcaption class="caption">Profanity score per episode</figcaption>
+                                </figure>
 
-                                    <div class="row">
-                                        <p>Another facts about Rick & Morty is their creativity when it comes to inventing new funny words, so let's see what we can find in there : </p>
-                                    </div>
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/profanity_score_season.png">
+                                    <figcaption class="caption">Profanity score per season</figcaption>
+                                </figure>
+
+                                <div class="row">
+                                    <p>First we can notice that profanity score are pretty low on a scale to one, they are all around 0.12. This can be explained by the fact that we are calculating profanity score on average, and most of the transcript are not swears, so that would defenitely lower the score. <br>If we are now looking at scores over time they are all the same over the seasons, except for the last one who has slightly lower average, so that proably means less swear words. So if we think back at our sentiment analysis we can probably forget the hypothesis that stated that swear words would lower the score for the last season.  </p>
+                                </div>
+
+                                <h3 class="row">Comparing Profanity Scores & IMDB Ratings</h3>
+
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/ratings_vs_profanity_ep.png">
+                                    <figcaption class="caption">Profanity Score vs. Ratings</figcaption>
+                                </figure>
+
+                                <div class="row">
+                                    <p>As we did for the sentiment score let's compare profanity score and ratings to see if it actually matters. And it appears that it does, ratings and profanity score, for the most part seems to be in sync, does that mean that the more swear words the better the episode ? From our point of you it's not the only parameters but yes it counts !</p>
+                                </div>
+
+                                <div class="row">
+                                    <h4>Swearing Contest !</h4>
+                                </div>
+
+                                <div class="row">
+                                    <p>It has become tradition for us, to compare Rick & Morty's line. Let's do it again for swearing!</p>
+                                </div>
+
+                                <figure class="full-width">
+                                    <img class="img-fluid" src="./plots/rm_profanity_score.png">
+                                    <figcaption class="caption">Sentiment Score vs. Profanity</figcaption>
+                                </figure>
+
+                                <div class="row">
+                                    <p>The plot above gives an insight into how the vulgarity of the Rick's and Morty's language was changing over time. On the x-axis there are seasons (divided into halves: a and b) while the y-axis represents the profanity score. Morty's style is more or less consistent through-out 3 seasons with the peak somewhere between the end of season 2 and the beginning of season 3. When it comes to Rick, here the analysis becomes a bit more interesting. From the very beginning of the series till the first half of season 2 his profanity score fluctuates around the same values as Morty did. But in the second half of the last season the number of the swear words skyrockets, while the Morty's score declines sharply. One could put forward a thesis that the Rick's language became much vulgar under the influence of Morty, while Morty's temperament melted down.</p>
+                                </div>
+
+                                <div class="row para-row">
+                                    <p>So again Rick wins the price !</p>
+                                </div>
+
+                                <!-- Made Up Words -->
+                                <div class="row">
+                                    <h3>Made Up Words!!</h3>
+                                </div>
+
+                                <div class="row">
+                                    <p>Another facts about Rick & Morty is their creativity when it comes to inventing new funny words, so let's see what we can find in there : </p>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +441,79 @@
                     <div class="row align-items-center">
                         <div class="p-5">
                             <h1 class="display-4">Songs</h1>
-                            <p>Oh dear, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                            <p>Aww Jeez, Rick & Morty songs, let's try and figure out what makes them so special !</p>
+                            
+                            <div class="container-fluid">
+                                <!-- Songs WC -->
+                                <div class="row">
+                                    <h2>Word Clouds</h2>
+                                </div>
+                                
+                                <div class="row full-width mb-3">
+                                    <div class="col-9">
+                                        <figure>
+                                            <img class="img-fluid" src="./plots/wc_songs.png">
+                                            <figcaption class="caption">Songs Word Cloud</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-3">
+                                        <table class="text-center" style="width: 100%">
+                                            <tr>
+                                                <th>
+                                                    <h4>Top 10</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <p> </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="p-5">
+                            <h1 class="display-4">Conclusion</h1>
+                            <p></p>
                         </div>
                     </div>
                 </div>

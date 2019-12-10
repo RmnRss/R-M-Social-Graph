@@ -200,3 +200,7 @@ figcaption{
 .table-fit tr td, .table-fit tr th{
         padding: 5px;
 }
+
+.para-row {
+    width: 100%;
+}
