@@ -182,6 +182,17 @@ main {
     border-width: thin;
 }
 
+.wc-full-width {
+    padding: 10px;
+    
+    background-color: white;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #f1f1f1 !important;
+    border-width: thin;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 figcaption{
     font-weight: 700;
 }
@@ -203,7 +214,7 @@ figcaption{
         padding: 5px;
 }
 
-.para-row {
+.w-100 {
     width: 100%;
 }
 
@@ -212,4 +223,8 @@ figcaption{
     font-weight: 500 !important;
     border: 2px solid !important;
     border-color: #0067d2;
+}
+
+.btn-align-right {
+    justify-content: flex-end !important;
 }
