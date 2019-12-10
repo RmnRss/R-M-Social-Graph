@@ -18,6 +18,8 @@
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <link rel="shortcut icon" href="https://vignette.wikia.nocookie.net/rickandmorty/images/6/64/Favicon.ico/revision/latest?cb=20160924233037">
     </head>
 
     <body>
@@ -57,7 +59,7 @@
                             <h1 class="display-4">General Facts</h1>
 
                             <div class="container-fluid row p-5">
-                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the one we kept we gathered the following frame :</p>
+                                <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the characters we gathered the following information :</p>
 
                                 <div class="container full-width">
                                     <div class="row align-items-center">
@@ -86,7 +88,7 @@
                                 </div>
 
 
-                                <p class="mt-3">We did so for 313 characters that are both in the API & on the Wiki. In the end, we ended up with the following character's statistics:</p>
+                                <p class="mt-3">We did so for 313 characters using both the <a href="https://rickandmortyapi.com/">Rick & Morty API</a> & <a href="https://rickandmorty.fandom.com/wiki/Rickipedia">Rickipedia</a>, a fandom wiki page dedicated to the explore the amazing world of Rick & Morty. In the end we ended up with the following characters statistics :</p>
 
                                 <table style="width:100%">
                                     <tr>
@@ -133,7 +135,7 @@
                                         <h3>About the Network</h3>
                                     </div>
                                     <div class="row">
-                                        <p>Nice number aren't they? But where the fudge did they came from? Well, we used both the Rickipedia and the Rick & Morty API to come up with the last numbers. We took the well-formatted pieces of information about characters from the API and we crossed them with the content of the Wikipedia pages. To create the networks we parsed each Wikipedia page of the characters to find links. When a link was found we created an edge from the character to the other character. </p>
+                                        <p>Well nice numbers, aren't they ? But where the fudge did they come from ? <br/> - We used both Rickipedia and the Rick & Morty API to come up with the last numbers. We took the well-formatted information about characters from the API and we crossed them with the contents of the wikipedia pages. To create the networks we parsed each Wikipedia page of the characters to find hyperlinks to other characters. When a link was found we created an edge (a link/connection) from the given character to the other character. </p>
 
                                     </div>
                                 </div>
@@ -148,7 +150,7 @@
                                         <figcaption class="caption">The Full Network</figcaption>
                                     </figure>
                                     <div class="row">
-                                        <p> Above you can see the complete character network, we highlighted the Ricks in <b style="color: #00e1ff"> blue </b> and the Mortys in <b style="color: #fae48b"> yellow </b>. We also printed the node size depending on their degree which is why Rick & Morty have such big nodes. Let's dive a little bit deeper into the degree analysis of our network.</p>
+                                        <p> Above you can see the complete character network, we highlighted the Ricks in <b style="color: #00e1ff"> blue </b> and the Mortys in <b style="color: #fae48b"> yellow </b>. We also printed the node size depending on their degree (how many links/connections they have) which is why Rick & Morty have such big nodes.<br/> Now - Let's dive a little bit deeper into the degree analysis of our network. </p>
                                     </div>
 
                                 </div>
@@ -158,13 +160,16 @@
                                     <div class="row">
                                         <h2>Degree Analysis</h2>
                                     </div>
+                                    <div class="row">
+                                        <p>In the figure below, we plotted the degree distribution, i.e. number of nodes with a given number of links. It will provide initial insight about the connections between characters.</p>
+                                    </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/distribution_degree.png">
                                         <figcaption class="caption">The General Degree Distribution</figcaption>
                                     </figure> 
 
                                     <div class="row">
-                                        <p>Nothing very surprising here, Rick & Morty, as well as their family members, have a big amount of nodes compared to other characters. Lots of other characters only know a few others, which makes sense considering the structure of the series, which focuses on random adventures over episodes.</p>
+                                        <p>Nothing very surprising here, Rick & Morty, as well as their family members, have a big amount of links compared to other characters. Lots of other characters only know a few others, which makes sense considering the structure of the series, where most episodes consist of random adventures with a lot of different characters throughout the episodes.</p>
                                     </div>
                                 </div>
 
@@ -178,26 +183,31 @@
                                     <div class="row">
                                         <h3>Betweenness Centrality</h3>
                                     </div>
+                                    <div class="row">
+                                        <p>Since betweenness is a measure of which node has the most shortest paths from A to B going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network.</p>
+                                    </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/centrality_betweenness.png">
                                         <figcaption class="caption">Betweeness vs Degree Cenrtality</figcaption>
                                     </figure>
                                     
                                     <div class="row">
-                                        <p>Since betweenness is a measure of which node has the shortest paths going through it, a high betweenness centrality means that this node is the character to know, if you want to be able to get as fast as possible from A to B in the network. As expected, Rick and Morty are most central, followed by the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
+                                        <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members.</p>
                                     </div>
 
                                     <!-- Centrality Eigenvector -->
                                     <div class="row">
                                         <h3>Centrality Eigenvector</h3>
                                     </div>
+                                    <div class="row">
+                                        <p>The Eigenvector centrality is a measure of how nodes (characters) are connected to other nodes with high degree (many links/connections), and in that sense it is a ranking. Characters have high eigenvector centrality probably because of popularity, i.e. they appear often with other high-degree characters.</p>
+                                    </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/centrality_eigenvector.png">
                                         <figcaption class="caption">Centrality Betweeness</figcaption>
                                     </figure>
                                     <div class="row">
-                                        <p>The Eigenvector centrality is a measure of how nodes are connected to other nodes with a high degree, and in that sense, it is a ranking. Characters have high eigenvector centrality probably because of popularity, i.e. they appear often with other high-degree characters.</p>
-                                        <p>Again, Morty and Rick appear with the highest centrality, whereas Jerry is in fifth place. Perhaps, as explained above with betweenness, because he is on many adventures in different locations, where a lot of characters with low degrees appear. Simply because these characters appear in locations that make them isolated from the rest of the network.</p>
+                                        <p>Again, Morty and Rick appear with highest centrality, whereas Jerry is on fifth place. Perhaps, like explained above with betweenness, because he is on many adventures in different locations, where a lot of characters with low degrees appear. Simply because these characters appear in locations that make them isolated from the rest of the network.</p>
                                     </div>
 
                                     <div class="row">
@@ -205,7 +215,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <p>Well, so far we haven't found anything surprising. But is it a bad sign? No, it's actually a good sign because it shows that the data we collected is in correlation with the show which is a very good point this far!</p>
+                                        <p>Well so far we haven't realized anything surprising. But is it a bad sign ? No it's actually a good sign because it shows that the data we collected is in correlation with the show which is a very good things this far !</p>
                                     </div>
 
                                 </div>
@@ -217,7 +227,7 @@
                                         <h2>Status View</h2>
                                     </div>
                                     <div class="row">
-                                        <p>Another fact about Rick & Morty is that it involves LOTS and LOTS of death. Luckily our data sources included this information about the characters so we decided to look into that, and we started by printing the network :</p>
+                                        <p> Another fact about Rick & Morty is that it involves LOTS and LOTS of death. Luckily our data sources included this information about the characters so we decided to look into that, and we started by plotting the following network, depicting alive characters as <b style="color: #53FF11">green</b> nodes, dead characters as <b style="color: #FF0000">red</b> nodes, and those nodes with "unknown" status are <b>black</b> : </p>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/characters_network_status.png">
@@ -233,7 +243,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <p>We ran a little analysis about this through our Network. We looked at every node's neighbors and analyzed their status (alive or dead) to have a sense of who has been in contact with the bigger amounts of dead character?</p>
+                                        <p>We ran a little analysis about this through our Network. We looked at every nodes' neighbors (the nodes that are just 1 link/connection away) and analyzed their status (alive or dead) to have a sense of who has been in contact with the biggest amount of dead characters.</p>
                                     </div>
 
                                     <figure class="full-width">
@@ -242,8 +252,8 @@
                                     </figure>
 
                                     <div class="row">
-                                        <p>And again, it's without any surprise that Rick & Morty are the most dangerous characters but the, apparently, innocent father, <b>Jerry Smith</b>, gets the third place in our rankings of most dangerous character in the whole series, beating his own wife & daughter. Even though those characters also have a lot of edges and appear more often, doing so, their chance of being next to dead characters increases.</p> 
-                                        <p>But when we forget about the Smith family we also stumble upon the infamous Evil Morty who probably has more kill than we know at that point in the series. Not surprising again but Beth & Summer better work on their danger game during season 4 otherwise Evil Morty might pass them!</p>
+                                        <p>And again, it's without big surprise that Rick & Morty are the most dangerous characters. But the otherwise innocent father <b>Jerry Smith</b> gets the third place in our rankings of most dangerous character in the whole series, beating his own wife & daughter. Since these characters have a lot of edges (links/connections) and appear more often, their chance of being next to dead characters increase.</p> 
+                                        <p>But when we look beyond the regular Smith family we stumble upon the infamous Evil Morty who probably has more kills than we know at that point of the series. Not surprising again but Beth & Summer better work on their danger game during season 4 otherwise Evil Morty might pass them !</p>
                                     </div>
 
                                 </div>
@@ -253,14 +263,16 @@
                                     <div class="row">
                                         <h2>Species View</h2>
                                     </div>
-
+                                    <div class="row">
+                                        <p>Rick & Morty is a very imaginary, explorative and diverse show, in terms of characters. Especially the variety of species is interesting, and therefore we decided to also plot a network with information about the species of each node.</p>
+                                    </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/characters_network_species.png">
                                         <figcaption class="caption">The Network By Species</figcaption>
                                     </figure>
 
                                     <div class="row">
-                                        <p>Nothing really special here, we just thought it would be nice to show you all the diversity of species in Rick & Morty, while humans are still the most represented, we can always appreciate the presence of others!</p>
+                                        <p>As shown by the figure, there are actually 10 known species at the moment. We wonder how many more will be added in season 4 on the new adventures of Rick & Morty to distants dimensions. While humans are still the most represented, we really appreciate the presence of all the others !</p>
                                     </div>
                                 </div>
 
@@ -272,12 +284,16 @@
                                     
                                     <!-- Community Introduction -->
                                     <div class="row">
-                                        <p>This section analyzes the communities by comparing four different algorithms for community detection. Plots are used to show the structure of communities and which of the main characters are central to a specific community. For instance, if Jerry Smith is the central character in a given community node will be colored green to match Jerry's awesome shirt. Likewise for Rick, where nodes are colored turquoise to match his pointy hair. If Rick and Morty are both in the same community, nodes will be colored in a flashy green to recall the portal gun. For each plot, node sizes are dependent on the size of the communities, such that bigger communities have bigger nodes.</p>
+                                        <p> This section analyzes the communities by comparing four different algorithms for community detection. Plots are used to show the structure of communities and which of the main characters are central to a specific community. For instance if <b>Jerry Smith</b> is the central character in a given community nodes will be colored <b style="color:#526E2D">darkgreen</b> to match Jerry's awesome shirt. Likewise for Rick, where nodes are colored <b style="color: #00E1FF">turquoise</b> to match his pointy hair. If Rick and Morty are both in the same community, nodes will be colored in a flashy <b style="color:#53FF11">green</b>  to recall the portal gun.<br/> For each plot, node sizes are dependent on the size of the communities, such that bigger communities have bigger nodes. </p>
+                                        <p>But first, a little note on what modularity means, since we use this number to determine how good a given algorithm is to find communities in a network; <i>Modularity: </i> A number between 0 and 1 that measures how good a division of a network into communities is, where 1 is perfect division.</p>
                                     </div>
                                     
                                     <!-- Community Greedy -->
                                     <div class="row">
                                         <h3>Greedy Communities</h3>
+                                    </div>
+                                    <div class="row">
+                                        <p>The greedy modularity maximization divides characters into communities decreasing by modularity, i.e. the first community will have the highest modularity.</p>
                                     </div>
                                     <figure class="full-width">
                                         <img class="img-fluid" src="./plots/community_greedy_modularity.png">
@@ -287,7 +303,7 @@
                                         <p>Modularity : <b>0.48</b></p>
                                     </div>
                                     <div class="row">
-                                        <p>The greedy modularity maximization divides characters into communities decreasing by modularity, i.e. the first community will have the highest modularity. As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon the maximization of modularity, a few big communities exist. This is due to the high degrees of Rick and Morty. This algorithm, as described by its name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm.</p>
+                                        <p>As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon maximization of modularity, a few big communities exist. This is due to the high degrees (many links/connections) of Rick and Morty. This algorithm, as described by it's name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm. </p>
                                     </div>
                                     
                                     <!-- Community Fluid -->
@@ -302,7 +318,7 @@
                                         <p>Modularity : <b>0.41</b></p>
                                     </div>
                                     <div class="row">
-                                        <p>The fluid communities algorithm requires defining <i>k</i> number of communities, since it assigns communities randomly to <i>k</i> nodes and divides communities by randomly iterating over nodes and assigning them to communities based on which communities the neighbors of the given node are divided into. This randomization results in more distinct communities than some of the other algorithms. </p>
+                                        <p>The fluid communities algorithm requires defining a number of communities, since it assigns communities randomly to this amount nodes. Then the algorithm divides communitites by randomly running through nodes and assigning them to communities based on which communities the neighbors of the given node are divided into. This randomization results in more distinct communities than some of the other algorithms. It is worth noting that changing the predefined number of communities has a high impact on the modularity. The number 15 was chosen, since two of the other algorithms divided the characters into exactly 15 distinct communities. </p>
                                     </div>
 
                                     <!-- Community Label -->
@@ -317,7 +333,7 @@
                                         <p>Modularity : <b>0.24</b></p>
                                     </div>
                                     <div class="row">
-                                        <p>The label propagation algorithm performs worst of all the algorithms when considering modularity. All members of the Smith family are clustered together into one large community that dominates the graph, also visually. This large community exists because of the labeling approach used by the algorithm, where nodes are divided into communities if their neighbors contain similar labels. This approach will enhance communities with high-degree nodes, thus generating this dominant community containing all members of the family.</p>
+                                        <p>The label propagation algorithm performs worst of all the algorithms, since it has the lowest modularity value. All members of the Smith family are clustered together into one large community that dominates the graph, also visually. This large community exists because of the labelling approach used by the algorithm, where nodes are divided into communities if their neighbors contain similar labels. This approach will enhance communities with high-degree (many links/connections) nodes, thus generating this dominant community containing all members of the family. </p>
                                     </div>    
 
                                     <!-- Community Louvain -->
@@ -332,9 +348,16 @@
                                         <p>Modularity : <b>0.45</b></p>
                                     </div>
                                     <div class="row">
-                                        <p> What is interesting about the Louvain algorithm is that the approach it uses to divide communities is similar to greedy modularity maximization. The major difference is the initial grouping of nodes locally. Perhaps this local grouping is the reason why Rick and Morty reside in separate communities, as compared to the greedy modularity maximization algorithm. </p>
+                                        <p> What is interesting about the Louvain algorithm is that the approach it uses to divide communities is similar to greedy modularity maximization. The major difference is the initial grouping of nodes locally. Perhaps this local grouping is the reason why the number of communities is lower than the greedy modularity maximization algorithm. </p><br/>
                                     </div>
-
+                                    
+                                    <!-- Community wrap-up -->
+                                    <div class="row">
+                                        <h2>Community Wrap-up</h2>
+                                    </div>
+                                    <div class="row">
+                                        <p>The four different community algorithms divide the characters in slightly different ways. For example, Rick and Morty are not always grouped into the same community. But perhaps more interestingly, Summer Smith is the only member of the Smith family to reside in her own community using most of the algorithms. This could indicate that she is detached from the Rick & Morty or detached from the Smith family. Not necessarily jumping to conclusions here, but her not always nice attitude towards Rick & Morty could perhaps explain some of this detachment.<br/> Even though the algorithms provide different results, there are also a number of interesting similarities. For instance the characters Terry and Purple Morty are central within a community for all four algorithms, making them characters worth noting, since they apparently have some central position in the show. All algorithms divide the characters into 15 or less communities. This is quite interesting, since the show contains far many more distinct locations, and we expected a larger number of communities that would be closer to the 100+ locations.</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -354,7 +377,7 @@
                                     <h2 class="display-4">Conclusion</h2>
                                 </div>
                                 <div class="row p-5">
-                                    <p>It was a fun ride, wasn't it? Even though we've have not been that surprised by the results we obtained. Why should you ask? Well, we're thinking it's because of the show structure which doesn't appeal to a lot of surprises, the episode only have a few in common and they often introduce lots of new characters. But nonetheless, we could confirm a lot. Rick & Morty being central to the show and absolutely deadly. And that we should pay more attention to Jerry now that we know he can be quite deadly despite appearances.</p>
+                                    <p>It was a fun ride wasn't it ? Even though we've have not been that surprised by the results we obtained. Why, you ask ? We're thinking it's because of the show structure which doesn't appeal to a lot of surprises, episode only have a few in common and they often introduce lots of new characters. Main findings include: <br/> Rick & Morty being central to the show and absolutely deadly. And that we should pay more attention to Jerry now that we know he can be quite deadly despite appearances. Summer seems to do her own thing, as we saw in the community analysis, where she was part of her own community in most cases</p>
                                 </div>
                             </div>
                         </div>
