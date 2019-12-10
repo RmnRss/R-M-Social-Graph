@@ -18,7 +18,7 @@
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
+
         <link rel="shortcut icon" href="https://vignette.wikia.nocookie.net/rickandmorty/images/6/64/Favicon.ico/revision/latest?cb=20160924233037">
     </head>
 
@@ -62,19 +62,26 @@
                                 <p>Well first let's try and discuss a bit about the characters of Rick & Morty and the information we collected. For each of the one we kept we gathered the following frame :</p>
 
                                 <div class="container">
-                                    <div class="row d-flex justify-content-center align-items-center">
-                                        <!-- Characters Network Card -->
-                                        <div class="card">
+                                    <div class="row horizontal-card">
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <img class="img-fluid rounded-circle" src="https://rickandmortyapi.com/api/character/avatar/118.jpeg">
+
+                                        </div>
+
+                                        <div class="col-6 d-flex justify-content-center align-items-center">
+                                            <!-- Characters Network Card -->
                                             <div class="card-body">
                                                 <h5 class="card-title">Character Frame</h5>
-                                                <p class="card-text"><b>Name:</b> Octopus Man</p>
-                                                <p><b>Specie:</b> Alien </p>
+                                                <p class="card-text"><b>Name:</b> Evil Morty</p>
+                                                <p><b>Specie:</b> Human</p>
                                                 <p><b>Status:</b> Alive</p>
-                                                <p><b>Last Know Location:</b> Interdimensional Cable</p>
+                                                <p><b>Last Know Location:</b> Citadel of Ricks</p>
                                             </div>
+
                                         </div>
 
                                     </div>
+
                                 </div>
 
 
@@ -83,20 +90,20 @@
                                 <table class="custom-table w-100 mt-2 mb-2">
                                     <tr>
                                         <th>Total</th>
-                                        <th>Ricks</th>
-                                        <th>Mortys</th>
                                         <th>Alive</th>
                                         <th>Dead</th>
                                         <th>Unknown</th>
+                                        <th>Ricks</th>
+                                        <th>Mortys</th>
                                         <th>Species</th>
                                     </tr>
                                     <tr>
                                         <td>313</td>
-                                        <td>42</td>
-                                        <td>30</td>
                                         <td>147</td>
                                         <td>115</td>
                                         <td>51</td>
+                                        <td>42</td>
+                                        <td>30</td>
                                         <td>11</td>
                                     </tr>
                                 </table>
@@ -167,9 +174,9 @@
                                     <div class="row">
                                         <h2>Centrality</h2>
                                     </div>
-                                    
+
                                     <p class="w-100">Centrality assigns an importance score to a node based purely on its number of nodes. So taking a look at centrality tells us which characters are the most popular, or which character to know if I want to know another one.So let's look at which of our characters are the most central.</p>
-                                    
+
                                     <!-- Betweenness Centrality -->
                                     <div class="row">
                                         <h3>Betweenness Centrality</h3>
@@ -181,7 +188,7 @@
                                         <img class="img-fluid" src="./plots/centrality_betweenness.png">
                                         <figcaption class="caption">Betweeness vs Degree Cenrtality</figcaption>
                                     </figure>
-                                    
+
                                     <div class="row">
                                         <p>As expected, Rick and Morty are most central, followed my the remaining members of the Smith family. Jerry is probably third because he joins Rick and Morty on most adventures, compared to the other two family members. So if I'm a new character in Rick & Morty and I want to meet another one, the optimal way is to ask Rick first, then Morty, then Jerry (you might not want to do that, or the conversation might get very boring), etc.</p>
                                     </div>
@@ -272,13 +279,13 @@
                                     <div class="row">
                                         <h2>Communities</h2>
                                     </div>
-                                    
+
                                     <!-- Community Introduction -->
                                     <div class="row">
                                         <p> This section analyzes the communities by comparing four different algorithms for community detection. Plots are used to show the structure of communities and which of the main characters are central to a specific community. For instance if <b>Jerry Smith</b> is the central character in a given community nodes will be colored <b style="color:#526E2D">darkgreen</b> to match Jerry's awesome shirt. Likewise for Rick, where nodes are colored <b style="color: #00E1FF">turquoise</b> to match his pointy hair. If Rick and Morty are both in the same community, nodes will be colored in a flashy <b style="color:#53FF11">green</b>  to recall the portal gun.<br/> For each plot, node sizes are dependent on the size of the communities, such that bigger communities have bigger nodes. </p>
                                         <p>But first, a little note on what modularity means, since we use this number to determine how good a given algorithm is to find communities in a network; <i>Modularity: </i> A number between 0 and 1 that measures how good a division of a network into communities is, where 1 is perfect division.</p>
                                     </div>
-                                    
+
                                     <!-- Community Greedy -->
                                     <div class="row">
                                         <h3>Greedy Communities</h3>
@@ -296,7 +303,7 @@
                                     <div class="row">
                                         <p>As shown by the graph this actually results in community size decreasing simultaneously with the decreasing modularity. Since communities are based upon maximization of modularity, a few big communities exist. This is due to the high degrees (many links/connections) of Rick and Morty. This algorithm, as described by it's name, will divide communities with the highest modularity, since that is inherent in the functionality of the algorithm. </p>
                                     </div>
-                                    
+
                                     <!-- Community Fluid -->
                                     <div class="row">
                                         <h3>Fluid Communities</h3>
@@ -335,13 +342,13 @@
                                         <img class="img-fluid" src="./plots/community_louvain.png">
                                         <figcaption class="caption">Louvain Communities</figcaption>
                                     </figure>
-                                     <div class="row">
+                                    <div class="row">
                                         <p>Modularity : <b>0.45</b></p>
                                     </div>
                                     <div class="row">
                                         <p> What is interesting about the Louvain algorithm is that the approach it uses to divide communities is similar to greedy modularity maximization. The major difference is the initial grouping of nodes locally. Perhaps this local grouping is the reason why the number of communities is lower than the greedy modularity maximization algorithm. </p><br/>
                                     </div>
-                                    
+
                                     <!-- Community wrap-up -->
                                     <div class="row">
                                         <h2>Community Wrap-up</h2>
