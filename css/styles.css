@@ -170,26 +170,34 @@ main {
     margin: 0 auto;
 }
 
-.full-width {
-    margin-left: -5%;
-    margin-right: -5%;
-    
+@media (min-width: 992px) {
+    main {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.img-frame {
     padding: 10px;
     background-color: #fbfbfb;
-    border-style: solid;
-    border-radius: 2px;
-    border-color: #f1f1f1 !important;
-    border-width: thin;
+    border: 1px solid;
+    border-color: #dbdbdb !important;
 }
 
 .wc-full-width {
     padding: 10px;
     
     background-color: white;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 5px;
-    border-color: #f1f1f1 !important;
-    border-width: thin;
+    border-color: #dbdbdb !important;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -202,7 +210,7 @@ figcaption{
 }
 
 .head-section{
-    margin-top: 5rem
+    margin-top: 5rem;
 }
 
 .table-fit tr td:last-child{
@@ -218,6 +226,10 @@ figcaption{
     width: 100%;
 }
 
+.h-100 {
+    height: 100%;
+}
+
 .btn-card {
     color: #0067d2 !important;
     font-weight: 500 !important;
@@ -230,13 +242,10 @@ figcaption{
 }
 
 .custom-table {
-    padding: 15px;
-    border: solid;
+    border: solid thin #dbdbdb !important;
     border-radius: 5px;
-    border-color: #f1f1f1 !important;
-    border-width: thin;
     text-align: center;
-    background-color: #f1f1f1 !important;
+    background-color: #fbfbfb !important;
 }
 
 .horizontal-card{
@@ -245,4 +254,8 @@ figcaption{
     border-radius: 5px;
     padding: 15px;
     background-color: #f1f1f1 !important;
+}
+
+.text-center{
+    text-align: center;
 }
