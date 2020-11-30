@@ -1,242 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Rick & Morty - SGI</title>
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
-          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-    <link rel="shortcut icon"
-          href="https://vignette.wikia.nocookie.net/rickandmorty/images/6/64/Favicon.ico/revision/latest?cb=20160924233037">
-</head>
+    <link
+      rel="shortcut icon"
+      href="https://vignette.wikia.nocookie.net/rickandmorty/images/6/64/Favicon.ico/revision/latest?cb=20160924233037"
+    />
+  </head>
 
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-    <div class="container">
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
         <a class="navbar-brand" href="./index.html">Rick & Morty SGI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./characters.html">Characters Network</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./nlp.html">Natural Language Processing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./data.html">Data</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank"
-                       href="https://colab.research.google.com/drive/1vKSZGvc2p_Ivtqd-PpJay9S7xA3XSimV">Explainer
-                        Notebook</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./characters.html"
+                >Characters Network</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nlp.html"
+                >Natural Language Processing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./data.html">Data</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://colab.research.google.com/drive/1vKSZGvc2p_Ivtqd-PpJay9S7xA3XSimV"
+                >Explainer Notebook</a
+              >
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- Header -->
-<header class="masthead text-center text-white">
-    <div class="masthead-content">
-        <div class="container">
-            <h1 class="masthead-heading mb-0">Rick & Morty</h1>
-            <h2 class="masthead-subheading mb-0">Through the Schwifty Lens<br/> of Data Science</h2>
-            <a href="https://github.com/RmnRss/rm-social-graphs/" class="btn btn-primary btn-xl rounded-pill mt-5">View
-                On Github</a>
-        </div>
-    </div>
-</header>
+    <!-- Header -->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <h1 class="masthead-heading mb-0">Rick & Morty</h1>
+        <h2 class="masthead-subheading mb-4">
+          Through the Schwifty Lens<br />
+          of Data Science
+        </h2>
+        <a
+          href="https://github.com/RmnRss/rm-social-graphs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-xl"
+          >View On Github</a
+        >
+      </div>
+    </header>
 
-<main>
+    <main>
+      <!-- Introduction -->
+      <section>
+        <h3>Welcome !</h3>
 
-    <!-- Introduction -->
-    <section>
-        <div class="container-fluid justify-content-center">
-            <div class="row pt-5">
-                <h2 class="display-4">Welcome !</h2>
-            </div>
-
-            <div class="row">
-                <p>This website was made to present and discuss our findings about a quick data-science analysis of the
-                    lovely TV Show Rick & Morty.</p>
-            </div>
-
-            <div class="row">
-                <p>We organised the website in 3 sections; Character Network, Natural Language Processing and Data. So
-                    if you are curious to know what we found you can click any of the following cards</p>
-            </div>
-
-            <div class="row">
-                <div class="container-fluid justify-content-center">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 mb-2">
-                            <!-- Characters Network Card -->
-                            <div class="card">
-                                <img src="https://rickandmortyapi.com/api/character/avatar/244.jpeg"
-                                     class="card-img-top"
-                                     alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Characters Network</h5>
-                                    <p class="card-text">In this section, we discuss all kinds of stuff about networks &
-                                        characters!</p>
-                                    <div class="d-flex btn-align-right">
-                                        <a href="./characters.html" class="btn btn-card">GO TO SECTION</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-2">
-                            <!-- NLP Card -->
-                            <div class="card">
-                                <img src="https://rickandmortyapi.com/api/character/avatar/11.jpeg" class="card-img-top"
-                                     alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Natural Language Processing</h5>
-                                    <p class="card-text">In this section, we discuss our NLP analysis of the episode's
-                                        transcripts & song lyrics.</p>
-                                    <div class="d-flex btn-align-right">
-                                        <a href="./nlp.html" class="btn btn-card">GO TO SECTION</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-2">
-                            <!-- Data Card -->
-                            <div class="card">
-                                <img src="https://rickandmortyapi.com/api/character/avatar/242.jpeg"
-                                     class="card-img-top"
-                                     alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">The Data</h5>
-                                    <p class="card-text">In this section, we present the data we used and how we
-                                        obtained
-                                        it.</p>
-                                    <div class="d-flex btn-align-right">
-                                        <a href="./data.html" class="btn btn-card">GO TO SECTION</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explainer Notebook -->
-    <section>
-        <div class="container-fluid justify-content-center">
-            <div class="row pt-5">
-                <h3 class="display-4">Explainer Notebook</h3>
-            </div>
-            <div class="row">
-                <p>All the analyses and data science behind this website, can be found in this <a target="_blank"
-                                                                                                  href="https://colab.research.google.com/drive/1vKSZGvc2p_Ivtqd-PpJay9S7xA3XSimV">Explainer
-                    Notebook</a>, which is hosted using Google Colab, that has allowed us to work collaboratively on
-                    this project. Also, you can download the datasets that we used <a
-                            href="https://github.com/RmnRss/rm-social-graphs/archive/gh-pages.zip">here</a>. Now you
-                    might ask: "Who is 'us'?" Search no further, dear reader.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us -->
-    <section>
-        <div class="container-fluid justify-content-center">
-            <div class="row pt-5 align-items-center">
-                <h3 class="display-4">About us</h3>
-            </div>
-            <div class="row">
-                <p>We are 3 DTU students who have been tasked to analyze any subject we deemed worthy of our newly
-                    acquired data science skills. We wisely chose to tackle the Rick & Morty TV Show.</p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-2">
-                    <!-- Characters Network Card -->
-                    <div class="card">
-                        <img src="https://avatars3.githubusercontent.com/u/19878056?s=460&v=4" class="card-img-top"
-                             alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Jacob Aagaard</h5>
-                            <div class="d-flex btn-align-right">
-                                <a href="https://github.com/JacobAagaard" class="btn btn-card">SEE ON GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2">
-                    <!-- NLP Card -->
-                    <div class="card">
-                        <img src="https://avatars2.githubusercontent.com/u/33030781?s=460&v=4" class="card-img-top"
-                             alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Romain Rousseau</h5>
-                            <div class="d-flex btn-align-right">
-                                <a href="https://github.com/RmnRss" class="btn btn-card">SEE ON GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2">
-                    <!-- Data Card -->
-                    <div class="card">
-                        <img src="https://avatars3.githubusercontent.com/u/54991339?s=460&v=4" class="card-img-top"
-                             alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Janusz Jagiello</h5>
-                            <div class="d-flex btn-align-right">
-                                <a href="https://github.com/yanooshhh" class="btn btn-card">SEE ON GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="py-5 bg-black">
-    <div class="container">
-        <p class="m-0 text-center text-white small">
-            Website created for the <a href="http://kurser.dtu.dk/course/02805 ">Social Graphs and Interactions</a>
-            course at <a href="https://www.dtu.dk/english">DTU</a>
+        <p>
+          This website was made to present and discuss our findings about a
+          quick data-science analysis of the lovely TV Show Rick & Morty.
         </p>
-    </div>
-</footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        <p>
+          We organised the website in 3 sections; Character Network, Natural
+          Language Processing and Data. So if you are curious to know what we
+          found you can click any of the following cards
+        </p>
 
-</body>
+        <div class="card-row w-100">
+          <!-- Characters Network Card -->
+          <div class="card">
+            <img
+              src="https://rickandmortyapi.com/api/character/avatar/244.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Characters Network</h5>
+              <p class="card-text">
+                In this section, we discuss all kinds of stuff about networks &
+                characters!
+              </p>
+              <div class="d-flex btn-align-right">
+                <a href="./characters.html" class="btn btn-card">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- NLP Card -->
+          <div class="card">
+            <img
+              src="https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Natural Language Processing</h5>
+              <p class="card-text">
+                In this section, we discuss our NLP analysis of the episode's
+                transcripts & song lyrics.
+              </p>
+              <div class="d-flex btn-align-right">
+                <a href="./nlp.html" class="btn btn-card">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Data Card -->
+          <div class="card">
+            <img
+              src="https://rickandmortyapi.com/api/character/avatar/242.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">The Data</h5>
+              <p class="card-text">
+                In this section, we present the data we used and how we obtained
+                it.
+              </p>
+              <div class="d-flex btn-align-right">
+                <a href="./data.html" class="btn btn-card">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explainer Notebook -->
+      <section>
+        <h3>Explainer Notebook</h3>
+        <p>
+          All the analyses and data science behind this website, can be found in
+          this
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://colab.research.google.com/drive/1vKSZGvc2p_Ivtqd-PpJay9S7xA3XSimV"
+            >Explainer Notebook</a
+          >, which is hosted using Google Colab, that has allowed us to work
+          collaboratively on this project. Also, you can download the datasets
+          that we used
+          <a
+            href="https://github.com/RmnRss/rm-social-graphs/archive/gh-pages.zip"
+            >here</a
+          >. Now you might ask: "Who is 'us'?" Search no further, dear reader.
+        </p>
+      </section>
+
+      <!-- About Us -->
+      <section>
+        <h3>About us</h3>
+        <p>
+          We are 3 DTU students who have been tasked to analyze any subject we
+          deemed worthy of our newly acquired data science skills. We wisely
+          chose to tackle the Rick & Morty TV Show.
+        </p>
+        <div class="card-row">
+          <div class="card">
+            <img
+              src="https://avatars3.githubusercontent.com/u/19878056?s=460&v=4"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jacob Aagaard</h5>
+              <div class="d-flex btn-align-right">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/JacobAagaard"
+                  class="btn btn-card"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://avatars2.githubusercontent.com/u/33030781?s=460&v=4"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Romain Rousseau</h5>
+              <div class="d-flex btn-align-right">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/RmnRss"
+                  class="btn btn-card"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://avatars3.githubusercontent.com/u/54991339?s=460&v=4"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Janusz Jagiello</h5>
+              <div class="d-flex btn-align-right">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/yanooshhh"
+                  class="btn btn-card"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">
+          Website created for the
+          <a
+            href="http://kurser.dtu.dk/course/02805"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Social Graphs and Interactions</a
+          >
+          course at
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.dtu.dk/english"
+            >DTU</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-
